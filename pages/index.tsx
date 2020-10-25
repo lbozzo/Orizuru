@@ -1,50 +1,28 @@
+import { HddStack } from '@styled-icons/bootstrap/HddStack';
+import { Laptop } from '@styled-icons/bootstrap/Laptop';
+import { Phone } from '@styled-icons/bootstrap/Phone';
+import { FacebookBox } from '@styled-icons/remix-line/FacebookBox';
+import { Github } from '@styled-icons/remix-line/Github';
+import { Instagram } from '@styled-icons/remix-line/Instagram';
+import { LinkedinBox } from '@styled-icons/remix-line/LinkedinBox';
+import { Twitter } from '@styled-icons/remix-line/Twitter';
+import { Amazonaws } from '@styled-icons/simple-icons/Amazonaws';
+import { Apollographql } from '@styled-icons/simple-icons/Apollographql';
+import { NextDotJs } from '@styled-icons/simple-icons/NextDotJs';
+import { NodeDotJs } from '@styled-icons/simple-icons/NodeDotJs';
+import { ReactLogo } from '@styled-icons/simple-icons/ReactLogo';
+import { StyledComponents } from '@styled-icons/simple-icons/StyledComponents';
+import { Typescript } from '@styled-icons/simple-icons/Typescript';
+
 import Box from '~components/Box';
 import Flex from '~components/Flex';
 import Heading from '~components/Heading';
-import Text from '~components/Text';
-import {
-    RiLinkedinBoxLine,
-    RiGithubLine,
-    RiInstagramLine,
-    RiFacebookBoxLine,
-    RiTwitterLine
-} from 'react-icons/ri';
-import { AiOutlineDesktop, AiOutlineMobile, AiOutlineApi } from 'react-icons/ai';
-import {
-    SiReact,
-    SiTypescript,
-    SiNextDotJs,
-    SiStyledComponents,
-    SiNodeDotJs,
-    SiApollographql
-} from 'react-icons/si';
-import { CgMouse } from 'react-icons/cg';
-import { BsArrowDownShort } from 'react-icons/bs';
+import Icon from '~components/Icon';
 import Link from '~components/Link';
-import { compose, typography, TypographyProps } from 'styled-system';
-import styled from 'styled-components';
 import ProfileQR from '~components/ProfileQR';
+import Text from '~components/Text';
 
-interface IconProps extends TypographyProps {}
-const LinkedInIcon = styled(RiLinkedinBoxLine)<IconProps>(compose(typography));
-const GithubIcon = styled(RiGithubLine)<IconProps>(compose(typography));
-const InstagramIcon = styled(RiInstagramLine)<IconProps>(compose(typography));
-const FacebookIcon = styled(RiFacebookBoxLine)<IconProps>(compose(typography));
-const TwitterIcon = styled(RiTwitterLine)<IconProps>(compose(typography));
-const MobileIcon = styled(AiOutlineMobile)<IconProps>(compose(typography));
-const WebIcon = styled(AiOutlineDesktop)<IconProps>(compose(typography));
-const APIIcon = styled(AiOutlineApi)<IconProps>(compose(typography));
-const ApolloIcon = styled(SiApollographql)<IconProps>(compose(typography));
-const MouseIcon = styled(CgMouse)<IconProps>(compose(typography));
-const TSIcon = styled(SiTypescript)<IconProps>(compose(typography));
-const ReactIcon = styled(SiReact)<IconProps>(compose(typography));
-const NextJSIcon = styled(SiNextDotJs)<IconProps>(compose(typography));
-const NodeJSIcon = styled(SiNodeDotJs)<IconProps>(compose(typography));
-const StyledIcon = styled(SiStyledComponents)<IconProps>(compose(typography));
-
-const ArrowDownIcon = styled(BsArrowDownShort)<IconProps>(compose(typography));
-
-export default function Home() {
+export default function Home(): JSX.Element {
     return (
         <Flex>
             <Flex
@@ -66,8 +44,9 @@ export default function Home() {
                                 </Heading>
                                 <Box my={2}>
                                     <Text fontSize={3}>
-                                        I'm a web &amp; mobile developer, dreamer and traveller. I'm
-                                        from Panama and you are welcome to my website.
+                                        I&apos;m a web &amp; mobile developer, dreamer and
+                                        traveller. I&apos;m from Panama and you are welcome to my
+                                        website.
                                     </Text>
                                 </Box>
                             </Box>
@@ -88,38 +67,43 @@ export default function Home() {
                             my={1}
                             mx={{ _: -2, lg: -3 }}>
                             <Link
-                                href="#"
+                                href="https://www.linkedin.com/in/lucas-bozzo/"
                                 target="_blank"
                                 hoverColor="linkedin"
                                 mx={{ _: 2, lg: 3 }}>
-                                <LinkedInIcon
-                                    aria-label="Connect with me on LinkedIn"
-                                    fontSize={4}
+                                <Icon
+                                    icon={LinkedinBox}
+                                    size={24}
+                                    title="Connect with me on LinkedIn"
                                 />
                             </Link>
-                            <Link href="#" target="_blank" hoverColor="github" mx={{ _: 2, lg: 3 }}>
-                                <GithubIcon aria-label="Star me on Github" fontSize={4} />
+                            <Link
+                                href="https://github.com/lbozzo"
+                                target="_blank"
+                                hoverColor="github"
+                                mx={{ _: 2, lg: 3 }}>
+                                <Icon icon={Github} size={24} title="Star me on Github" />
                             </Link>
                             <Link
-                                href="#"
+                                href="https://www.instagram.com/lucasbozzo"
                                 target="_blank"
                                 hoverColor="instagram"
                                 mx={{ _: 2, lg: 3 }}>
-                                <InstagramIcon aria-label="Follow me on Instagram" fontSize={4} />
+                                <Icon icon={Instagram} size={24} title="Follow me on Instagram" />
                             </Link>
                             <Link
-                                href="#"
+                                href="https://www.facebook.com/lucas.jose.bozzo/"
                                 target="_blank"
                                 hoverColor="facebook"
                                 mx={{ _: 2, lg: 3 }}>
-                                <FacebookIcon aria-label="Follow me on Facebook" fontSize={4} />
+                                <Icon icon={FacebookBox} size={24} title="Follow me on Facebook" />
                             </Link>
                             <Link
-                                href="#"
+                                href="https://twitter.com/ljbozzo"
                                 target="_blank"
                                 hoverColor="twitter"
                                 mx={{ _: 2, lg: 3 }}>
-                                <TwitterIcon aria-label="Follow me on Twitter" fontSize={4} />
+                                <Icon icon={Twitter} size={24} title="Follow me on Twitter" />
                             </Link>
                         </Flex>
 
@@ -141,7 +125,7 @@ export default function Home() {
                 <Heading>What do I do?</Heading>
                 <Flex flexDirection={{ _: 'column', lg: 'row' }} mx={{ _: 0, lg: -4 }}>
                     <Flex flex={1} pt={4} mx={4}>
-                        <WebIcon fontSize={5} />
+                        <Icon icon={Laptop} size={32} />
                         <Box pt={2}>
                             <Box py={1}>
                                 <Heading as="h3" fontSize={4} fontWeight="medium">
@@ -155,7 +139,7 @@ export default function Home() {
                         </Box>
                     </Flex>
                     <Flex flex={1} pt={4} mx={4}>
-                        <MobileIcon fontSize={5} />
+                        <Icon icon={Phone} size={32} />
                         <Box pt={2}>
                             <Box py={1}>
                                 <Heading as="h3" fontSize={4} fontWeight="medium">
@@ -169,16 +153,16 @@ export default function Home() {
                         </Box>
                     </Flex>
                     <Flex flex={1} pt={4} mx={4}>
-                        <APIIcon fontSize={5} />
+                        <Icon icon={HddStack} size={32} />
                         <Box pt={2}>
                             <Box py={1}>
                                 <Heading as="h3" fontSize={4} fontWeight="medium">
-                                    Mobile
+                                    API
                                 </Heading>
                             </Box>
                             <Text textAlign="left">
-                                I develop mobile apps for both iOS and Android operating systems. I
-                                use React Native.
+                                I develop API&apos;s with all the business logic needed and hosted
+                                anywhere. My go-to tool is Node.js
                             </Text>
                         </Box>
                     </Flex>
@@ -198,7 +182,7 @@ export default function Home() {
                             mx={4}
                             flexDirection={{ _: 'column', md: 'row' }}
                             alignItems="center">
-                            <NextJSIcon fontSize={6} />
+                            <Icon icon={NextDotJs} size={40} />
                             <Box mx={2}>
                                 <Text textAlign={{ _: 'center', md: 'left' }} fontSize={2}>
                                     Next.js
@@ -212,7 +196,7 @@ export default function Home() {
                             mx={4}
                             flexDirection={{ _: 'column', md: 'row' }}
                             alignItems="center">
-                            <ReactIcon fontSize={6} />
+                            <Icon icon={ReactLogo} size={40} />
                             <Box mx={2}>
                                 <Text textAlign={{ _: 'center', md: 'left' }} fontSize={2}>
                                     React Native
@@ -226,7 +210,7 @@ export default function Home() {
                             mx={4}
                             flexDirection={{ _: 'column', md: 'row' }}
                             alignItems="center">
-                            <TSIcon fontSize={6} />
+                            <Icon icon={Typescript} size={40} />
                             <Box mx={2}>
                                 <Text textAlign={{ _: 'center', md: 'left' }} fontSize={2}>
                                     Typescript
@@ -240,7 +224,7 @@ export default function Home() {
                             mx={4}
                             flexDirection={{ _: 'column', md: 'row' }}
                             alignItems="center">
-                            <NodeJSIcon fontSize={6} />
+                            <Icon icon={NodeDotJs} size={40} />
                             <Box mx={2}>
                                 <Text textAlign={{ _: 'center', md: 'left' }} fontSize={2}>
                                     Node.js
@@ -254,7 +238,7 @@ export default function Home() {
                             mx={4}
                             flexDirection={{ _: 'column', md: 'row' }}
                             alignItems="center">
-                            <ApolloIcon fontSize={6} />
+                            <Icon icon={Apollographql} size={40} />
                             <Box mx={2}>
                                 <Text textAlign={{ _: 'center', md: 'left' }} fontSize={2}>
                                     Apollo
@@ -268,10 +252,24 @@ export default function Home() {
                             mx={4}
                             flexDirection={{ _: 'column', md: 'row' }}
                             alignItems="center">
-                            <StyledIcon fontSize={6} />
+                            <Icon icon={StyledComponents} size={40} />
                             <Box mx={2}>
                                 <Text textAlign={{ _: 'center', md: 'left' }} fontSize={2}>
                                     Styled-components
+                                </Text>
+                            </Box>
+                        </Flex>
+                    </Flex>
+                    <Flex width={{ _: 1 / 2, sm: 1 / 3 }}>
+                        <Flex
+                            pt={4}
+                            mx={4}
+                            flexDirection={{ _: 'column', md: 'row' }}
+                            alignItems="center">
+                            <Icon icon={Amazonaws} size={40} />
+                            <Box mx={2}>
+                                <Text textAlign={{ _: 'center', md: 'left' }} fontSize={2}>
+                                    AWS
                                 </Text>
                             </Box>
                         </Flex>
@@ -315,53 +313,58 @@ export default function Home() {
                                         justifyContent="flex-start"
                                         mx={{ _: -2 }}>
                                         <Link
-                                            href="#"
+                                            href="https://www.linkedin.com/in/lucas-bozzo/"
                                             target="_blank"
                                             hoverColor="linkedin"
                                             mx={{ _: 2 }}>
-                                            <LinkedInIcon
-                                                aria-label="Connect with me on LinkedIn"
-                                                fontSize={3}
+                                            <Icon
+                                                icon={LinkedinBox}
+                                                size={20}
+                                                title="Connect with me on LinkedIn"
                                             />
                                         </Link>
                                         <Link
-                                            href="#"
+                                            href="https://github.com/lbozzo"
                                             target="_blank"
                                             hoverColor="github"
                                             mx={{ _: 2 }}>
-                                            <GithubIcon
-                                                aria-label="Star me on Github"
-                                                fontSize={3}
+                                            <Icon
+                                                icon={Github}
+                                                size={20}
+                                                title="Star me on Github"
                                             />
                                         </Link>
                                         <Link
-                                            href="#"
+                                            href="https://www.instagram.com/lucasbozzo"
                                             target="_blank"
                                             hoverColor="instagram"
                                             mx={{ _: 2 }}>
-                                            <InstagramIcon
-                                                aria-label="Follow me on Instagram"
-                                                fontSize={3}
+                                            <Icon
+                                                icon={Instagram}
+                                                size={20}
+                                                title="Follow me on Instagram"
                                             />
                                         </Link>
                                         <Link
-                                            href="#"
+                                            href="https://www.facebook.com/lucas.jose.bozzo/"
                                             target="_blank"
                                             hoverColor="facebook"
                                             mx={{ _: 2 }}>
-                                            <FacebookIcon
-                                                aria-label="Follow me on Facebook"
-                                                fontSize={3}
+                                            <Icon
+                                                icon={FacebookBox}
+                                                size={20}
+                                                title="Follow me on Facebook"
                                             />
                                         </Link>
                                         <Link
-                                            href="#"
+                                            href="https://twitter.com/ljbozzo"
                                             target="_blank"
                                             hoverColor="twitter"
                                             mx={{ _: 2 }}>
-                                            <TwitterIcon
-                                                aria-label="Follow me on Twitter"
-                                                fontSize={3}
+                                            <Icon
+                                                icon={Twitter}
+                                                size={20}
+                                                title="Follow me on Twitter"
                                             />
                                         </Link>
                                     </Flex>
