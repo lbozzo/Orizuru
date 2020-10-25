@@ -23,7 +23,7 @@ const ProfileQR = () => {
                     </Box>
                     <img
                         alt="Profile"
-                        src="/assets/images/profile.jpeg"
+                        src="/assets/images/profile.jpg"
                         style={{
                             width: '100%',
                             height: '100%',
