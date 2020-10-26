@@ -382,16 +382,6 @@ export default function Home(): JSX.Element {
                             </Flex>
                         </Box>
                     </Flex>
-                    <Flex
-                        flex={1}
-                        my={{ _: 3, md: 3 }}
-                        mx={{ _: 0, md: 3 }}
-                        bg="gray.900"
-                        color="white">
-                        <Box py={4} px={5}>
-                            Contact form coming soon!
-                        </Box>
-                    </Flex>
                 </Flex>
             </Flex>
             <Flex py={2} bg="background">
