@@ -1,35 +1,38 @@
 import { Arrow90degUp } from '@styled-icons/bootstrap/Arrow90degUp';
 import { Scan } from '@styled-icons/boxicons-regular/Scan';
-import css from '@styled-system/css';
 import { useState } from 'react';
-import styled from 'styled-components';
 
 import Box from './Box';
 import Flex from './Flex';
+import Img from './Img';
 import Text from './Text';
 
-const ProfileQR = () => {
+const ProfileQR = (): JSX.Element => {
     const [show, toggleShow] = useState(false);
     return (
         <Box onClick={() => toggleShow(!show)}>
-            <Flex borderRadius={6} overflow="hidden">
+            <Flex overflow="hidden">
                 <Box position="relative" width={{ _: 225, lg: 300 }} height={{ _: 225, lg: 300 }}>
-                    <Box position="absolute" bg="black" p={2} opacity={+show}>
-                        <img
-                            alt="QR Contact"
-                            src="/assets/images/qrcontact.jpg"
-                            style={{ width: '100%', height: '100%' }}
+                    <Box position="absolute" bg="black" width="100%" height="100%" opacity={+show}>
+                        <Box m={1}>
+                            <Img
+                                alt="QR Contact"
+                                src="/assets/images/qrcontact.svg"
+                                borderRadius={6}
+                            />
+                        </Box>
+                    </Box>
+                    <Box width="100%" height="100%" opacity={+!show}>
+                        <Img
+                            alt="Profile"
+                            src="/assets/images/profile.jpg"
+                            width="100%"
+                            height="100%"
+                            style={{
+                                objectFit: 'cover'
+                            }}
                         />
                     </Box>
-                    <img
-                        alt="Profile"
-                        src="/assets/images/profile.jpg"
-                        style={{
-                            width: '100%',
-                            height: '100%',
-                            objectFit: 'cover'
-                        }}
-                    />
                 </Box>
             </Flex>
 
@@ -55,4 +58,4 @@ const ProfileQR = () => {
         </Box>
     );
 };
-export default styled(ProfileQR)(css({ cursor: 'pointer', bg: 'red' }));
+export default ProfileQR;

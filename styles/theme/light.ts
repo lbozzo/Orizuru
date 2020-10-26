@@ -9,7 +9,7 @@ const colors = {
     white: '#fff',
     text: '#212121',
     background: '#fff',
-    primary: '#153E75',
+    primary: '#1A365D',
 
     linkedin: '#0077b5',
     github: '#333',

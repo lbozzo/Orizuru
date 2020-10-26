@@ -4,6 +4,7 @@ import { createRef, FC, useEffect, useState } from 'react';
 
 import Box from './Box';
 import Flex from './Flex';
+import Link from './Link';
 import Text from './Text';
 
 const ReadMore: FC = ({ children }) => {
@@ -32,16 +33,22 @@ const ReadMore: FC = ({ children }) => {
                 {children}
             </Text>
             {(ellipsis || show) && (
-                <Flex
-                    flexDirection="row"
-                    alignItems="center"
-                    pt={1}
-                    width="fit-content"
-                    onClick={() => toggleShow(!show)}
-                    style={{ cursor: 'pointer' }}>
-                    <Text fontWeight="medium">{show ? 'Show less' : 'Show more'}</Text>
-                    {show ? <ExpandLess size={22} /> : <ExpandMore size={22} />}
-                </Flex>
+                <Box width="fit-content">
+                    <Link as="div">
+                        <Flex
+                            flexDirection="row"
+                            alignItems="center"
+                            pt={1}
+                            width="fit-content"
+                            onClick={() => toggleShow(!show)}
+                            style={{ cursor: 'pointer' }}>
+                            <Text fontWeight="medium" color="inherit">
+                                {show ? 'Show less' : 'Show more'}
+                            </Text>
+                            {show ? <ExpandLess size={22} /> : <ExpandMore size={22} />}
+                        </Flex>
+                    </Link>
+                </Box>
             )}
         </Box>
     );
