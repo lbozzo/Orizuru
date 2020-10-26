@@ -23,6 +23,7 @@ import Icon from '~components/Icon';
 import Link from '~components/Link';
 import ProfileQR from '~components/ProfileQR';
 import ReadMore from '~components/ReadMore';
+import Skill from '~components/Skill';
 import Text from '~components/Text';
 
 export default function Home(): JSX.Element {
@@ -192,104 +193,25 @@ export default function Home(): JSX.Element {
 
                 <Flex flexDirection="row" flexWrap="wrap" mx={{ _: 0, lg: -4 }}>
                     <Flex width={{ _: 1 / 2, sm: 1 / 3 }}>
-                        <Flex
-                            pt={4}
-                            mx={4}
-                            flexDirection={{ _: 'column', md: 'row' }}
-                            alignItems="center">
-                            <Box color="gray.900">
-                                <Icon icon={NextDotJs} size={40} />
-                            </Box>
-                            <Box mx={2}>
-                                <Text textAlign={{ _: 'center', md: 'left' }} fontSize={2}>
-                                    Next.js
-                                </Text>
-                            </Box>
-                        </Flex>
+                        <Skill icon={NextDotJs} name="Next.js" />
                     </Flex>
                     <Flex width={{ _: 1 / 2, sm: 1 / 3 }}>
-                        <Flex
-                            pt={4}
-                            mx={4}
-                            flexDirection={{ _: 'column', md: 'row' }}
-                            alignItems="center">
-                            <Icon icon={ReactLogo} size={40} />
-                            <Box mx={2}>
-                                <Text textAlign={{ _: 'center', md: 'left' }} fontSize={2}>
-                                    React Native
-                                </Text>
-                            </Box>
-                        </Flex>
+                        <Skill icon={ReactLogo} name="React Native" />
                     </Flex>
                     <Flex width={{ _: 1 / 2, sm: 1 / 3 }}>
-                        <Flex
-                            pt={4}
-                            mx={4}
-                            flexDirection={{ _: 'column', md: 'row' }}
-                            alignItems="center">
-                            <Icon icon={Typescript} size={40} />
-                            <Box mx={2}>
-                                <Text textAlign={{ _: 'center', md: 'left' }} fontSize={2}>
-                                    Typescript
-                                </Text>
-                            </Box>
-                        </Flex>
+                        <Skill icon={Typescript} name="Typescript" />
                     </Flex>
                     <Flex width={{ _: 1 / 2, sm: 1 / 3 }}>
-                        <Flex
-                            pt={4}
-                            mx={4}
-                            flexDirection={{ _: 'column', md: 'row' }}
-                            alignItems="center">
-                            <Icon icon={NodeDotJs} size={40} />
-                            <Box mx={2}>
-                                <Text textAlign={{ _: 'center', md: 'left' }} fontSize={2}>
-                                    Node.js
-                                </Text>
-                            </Box>
-                        </Flex>
+                        <Skill icon={NodeDotJs} name="Node.js" />
                     </Flex>
                     <Flex width={{ _: 1 / 2, sm: 1 / 3 }}>
-                        <Flex
-                            pt={4}
-                            mx={4}
-                            flexDirection={{ _: 'column', md: 'row' }}
-                            alignItems="center">
-                            <Icon icon={Apollographql} size={40} />
-                            <Box mx={2}>
-                                <Text textAlign={{ _: 'center', md: 'left' }} fontSize={2}>
-                                    Apollo
-                                </Text>
-                            </Box>
-                        </Flex>
+                        <Skill icon={Apollographql} name="Apollo" />
                     </Flex>
                     <Flex width={{ _: 1 / 2, sm: 1 / 3 }}>
-                        <Flex
-                            pt={4}
-                            mx={4}
-                            flexDirection={{ _: 'column', md: 'row' }}
-                            alignItems="center">
-                            <Icon icon={StyledComponents} size={40} />
-                            <Box mx={2}>
-                                <Text textAlign={{ _: 'center', md: 'left' }} fontSize={2}>
-                                    Styled-components
-                                </Text>
-                            </Box>
-                        </Flex>
+                        <Skill icon={StyledComponents} name="Styled-components" />
                     </Flex>
                     <Flex width={{ _: 1 / 2, sm: 1 / 3 }}>
-                        <Flex
-                            pt={4}
-                            mx={4}
-                            flexDirection={{ _: 'column', md: 'row' }}
-                            alignItems="center">
-                            <Icon icon={Amazonaws} size={40} />
-                            <Box mx={2}>
-                                <Text textAlign={{ _: 'center', md: 'left' }} fontSize={2}>
-                                    AWS
-                                </Text>
-                            </Box>
-                        </Flex>
+                        <Skill icon={Amazonaws} name="AWS" />
                     </Flex>
                 </Flex>
             </Flex>
