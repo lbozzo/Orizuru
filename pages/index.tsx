@@ -42,17 +42,22 @@ export default function Home(): JSX.Element {
                     <Flex flex={1} flexDirection={{ _: 'column', md: 'row' }} mx={{ _: 0, lg: -3 }}>
                         <Flex flex={1} justifyContent="center" mx={{ lg: 3 }}>
                             <Box>
-                                <Text as="h1" fontSize={6} fontWeight="light">
+                                <Text
+                                    as="h1"
+                                    fontSize={6}
+                                    fontWeight="light"
+                                    lineHeight={{ _: 1, md: 1.618 }}>
                                     I&apos;m{' '}
                                     <Text
                                         as="b"
                                         fontSize="inherit"
                                         fontWeight="medium"
+                                        lineHeight={{ _: 1, md: 1.618 }}
                                         color="primary">
                                         Lucas Jos&eacute; Bozzo.
                                     </Text>
                                 </Text>
-                                <Box my={2}>
+                                <Box my={{ _: 3, md: 2 }}>
                                     <Text fontSize={3}>
                                         I&apos;m a web &amp; mobile developer, business analyst,
                                         dreamer and traveller. I&apos;m from Panama and you are
@@ -124,7 +129,7 @@ export default function Home(): JSX.Element {
                         </Flex>
 
                         <Flex pt={2}>
-                            <Box width="fit-content">
+                            <Box width={{ _: 'auto', md: 'fit-content' }}>
                                 <Link href="mailto:lucasbozzo03@gmail.com?subject=Hi Lucas! Let's get in touch">
                                     <Text
                                         textAlign={{ _: 'center', md: 'right' }}

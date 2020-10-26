@@ -11,13 +11,15 @@ const ProfileQR = (): JSX.Element => {
     const [show, toggleShow] = useState(false);
     return (
         <Box onClick={() => toggleShow(!show)}>
-            <Flex overflow="hidden">
+            <Flex borderRadius={6} overflow="hidden" boxShadow="medium">
                 <Box position="relative" width={{ _: 225, lg: 300 }} height={{ _: 225, lg: 300 }}>
                     <Box position="absolute" bg="black" width="100%" height="100%" opacity={+show}>
                         <Box m={1}>
                             <Img
                                 alt="QR Contact"
                                 src="/assets/images/qrcontact.svg"
+                                width="100%"
+                                height="100%"
                                 borderRadius={6}
                             />
                         </Box>
