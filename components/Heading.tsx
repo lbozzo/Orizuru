@@ -10,7 +10,10 @@ const Heading = styled('h2')<HeadingProps>(
         fontSize: 5,
         fontWeight: 'bold',
         color: 'gray.900',
-        lineHeight: [1.618]
+        lineHeight: [1.618],
+        '&:hover': {
+            color: 'primary'
+        }
     }),
     compose(typography, color)
 );

@@ -1,4 +1,3 @@
-import { ArrowRightShort } from '@styled-icons/bootstrap/ArrowRightShort';
 import { HddStack } from '@styled-icons/bootstrap/HddStack';
 import { Laptop } from '@styled-icons/bootstrap/Laptop';
 import { Phone } from '@styled-icons/bootstrap/Phone';
@@ -23,7 +22,6 @@ import Heading from '~components/Heading';
 import Icon from '~components/Icon';
 import Link from '~components/Link';
 import ProfileQR from '~components/ProfileQR';
-import ReadMore from '~components/ReadMore';
 import Skill from '~components/Skill';
 import Text from '~components/Text';
 
@@ -44,9 +42,16 @@ export default function Home(): JSX.Element {
                     <Flex flex={1} flexDirection={{ _: 'column', md: 'row' }} mx={{ _: 0, lg: -3 }}>
                         <Flex flex={1} justifyContent="center" mx={{ lg: 3 }}>
                             <Box>
-                                <Heading as="h1" fontWeight="normal">
-                                    I&apos;m <b>Lucas Jos&eacute; Bozzo.</b>
-                                </Heading>
+                                <Text as="h1" fontSize={6} fontWeight="light">
+                                    I&apos;m{' '}
+                                    <Text
+                                        as="b"
+                                        fontSize="inherit"
+                                        fontWeight="medium"
+                                        color="primary">
+                                        Lucas Jos&eacute; Bozzo.
+                                    </Text>
+                                </Text>
                                 <Box my={2}>
                                     <Text fontSize={3}>
                                         I&apos;m a web &amp; mobile developer, business analyst,
@@ -118,12 +123,17 @@ export default function Home(): JSX.Element {
                             </Link>
                         </Flex>
 
-                        <Flex flex={1} pt={2}>
-                            <a href="mailto:lucasbozzo03@gmail.com?subject=Hi Lucas! Let's get in touch">
-                                <Text textAlign={{ _: 'center', md: 'right' }} lineHeight={2}>
-                                    lucasbozzo03@gmail.com
-                                </Text>
-                            </a>
+                        <Flex pt={2}>
+                            <Box width="fit-content">
+                                <Link href="mailto:lucasbozzo03@gmail.com?subject=Hi Lucas! Let's get in touch">
+                                    <Text
+                                        textAlign={{ _: 'center', md: 'right' }}
+                                        lineHeight={2}
+                                        color="inherit">
+                                        lucasbozzo03@gmail.com
+                                    </Text>
+                                </Link>
+                            </Box>
                         </Flex>
                     </Flex>
                 </Flex>
@@ -294,19 +304,23 @@ export default function Home(): JSX.Element {
                             <Flex flexDirection={{ _: 'column', md: 'row' }}>
                                 <Flex flex={1} my={{ _: 2 }}>
                                     <Box py={1}>
-                                        <Heading as="h3" fontSize={1} fontWeight="light">
+                                        <Text as="h3" fontSize={1} fontWeight="light">
                                             Mail me at
-                                        </Heading>
+                                        </Text>
                                     </Box>
-                                    <a href="mailto:lucasbozzo03@gmail.com?subject=Hi Lucas! Let's get in touch">
-                                        <Text lineHeight={2}>lucasbozzo03@gmail.com</Text>
-                                    </a>
+                                    <Box width="fit-content">
+                                        <Link href="mailto:lucasbozzo03@gmail.com?subject=Hi Lucas! Let's get in touch">
+                                            <Text lineHeight={2} color="inherit">
+                                                lucasbozzo03@gmail.com
+                                            </Text>
+                                        </Link>
+                                    </Box>
                                 </Flex>
                                 <Flex flex={1} my={{ _: 2 }}>
                                     <Box py={1}>
-                                        <Heading as="h3" fontSize={1} fontWeight="light">
+                                        <Text as="h3" fontSize={1} fontWeight="light">
                                             Follow me
-                                        </Heading>
+                                        </Text>
                                     </Box>
                                     <Flex
                                         flexDirection="row"

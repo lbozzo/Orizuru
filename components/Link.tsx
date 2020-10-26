@@ -1,12 +1,11 @@
-import styled from 'styled-components';
-import { darken } from 'polished';
 import css from '@styled-system/css';
 import { themeGet } from '@styled-system/theme-get';
+import { darken } from 'polished';
+import styled from 'styled-components';
 import {
     color,
     ColorProps,
     compose,
-    fontWeight,
     space,
     SpaceProps,
     typography,
@@ -28,7 +27,7 @@ const Link = styled('a')<LinkProps>(
             lineHeight: 2,
             color: 'text',
             '&:hover': {
-                color: hoverColor || darken(0.1, themeGet('colors.text', '#000')(props))
+                color: hoverColor || themeGet('colors.primary', '#000')(props)
             }
         }),
     compose(color, space, typography)
