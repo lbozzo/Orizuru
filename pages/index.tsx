@@ -17,6 +17,7 @@ import { StyledComponents } from '@styled-icons/simple-icons/StyledComponents';
 import { Typescript } from '@styled-icons/simple-icons/Typescript';
 
 import Box from '~components/Box';
+import Experience from '~components/Experience';
 import Flex from '~components/Flex';
 import Heading from '~components/Heading';
 import Icon from '~components/Icon';
@@ -236,63 +237,42 @@ export default function Home(): JSX.Element {
                 </Flex>
                 <Flex pt={4}>
                     <Flex mb={4}>
-                        <Text color="gray.700" fontSize={0} fontWeight="medium">
-                            <Flex flexDirection="row" alignItems="center">
-                                <Box>AUG 2020</Box>
-                                <ArrowRightShort size={16} />
-                                <Box>OCT 2020</Box>
-                            </Flex>
-                        </Text>
-                        <Text fontSize={3}>
-                            <b>Maddot Studio</b>, Remote – Freelancer
-                        </Text>
-                        <Box pt={2} maxWidth="md">
-                            <ReadMore>
-                                Developed landing page for their design studio using Next.js,
-                                Styled-components, Framer motion and ThreeJS, including user
-                                interaction with 3D Model.
-                            </ReadMore>
-                        </Box>
+                        <Experience
+                            startDate="Aug 2020"
+                            endDate="Oct 2020"
+                            company="Maddot Studio"
+                            location="Remote"
+                            position="Freelancer">
+                            Developed landing page for their design studio startup using Next.js,
+                            Styled-components, Framer motion and ThreeJS, including user interaction
+                            with 3D Model.
+                        </Experience>
                     </Flex>
                     <Flex mb={4}>
-                        <Text color="gray.700" fontSize={0} fontWeight="medium">
-                            <Flex flexDirection="row" alignItems="center">
-                                <Box>APR 2017</Box>
-                                <ArrowRightShort size={16} />
-                                <Box>AUG 2019</Box>
-                            </Flex>
-                        </Text>
-                        <Text fontSize={3}>
-                            <b>Copa Airlines</b>, Panama – Business Systems Analyst
-                        </Text>
-                        <Box pt={2} maxWidth="md">
-                            <ReadMore>
-                                Worked along Human Resources and Payroll business units for 32
-                                countries. Led the release, migration and integrations of the new
-                                systems for both business areas, Oracle HCM and SQLSoftware.
-                            </ReadMore>
-                        </Box>
+                        <Experience
+                            startDate="Apr 2017"
+                            endDate="Aug 2019"
+                            company="Copa Airlines"
+                            location="Panama"
+                            position="Business Systems Analyst">
+                            Worked along Human Resources and Payroll business units for 32
+                            countries. Led the release, migration and integrations of the new
+                            systems for both business areas, Oracle HCM and SQLSoftware.
+                        </Experience>
                     </Flex>
                     <Flex mb={4}>
-                        <Text color="gray.700" fontSize={0} fontWeight="medium">
-                            <Flex flexDirection="row" alignItems="center">
-                                <Box>JAN 2018</Box>
-                                <ArrowRightShort size={16} />
-                                <Box>DEC 2019</Box>
-                            </Flex>
-                        </Text>
-                        <Text fontSize={3}>
-                            <b>Clariti Chile</b>, Remote – Software Developer
-                        </Text>
-                        <Box pt={2} maxWidth="md">
-                            <ReadMore>
-                                Developed 2 applications, fullstack. The first, a mobile and web
-                                application for vehicle inspections, using React Native and React.js
-                                in the front end and Lumen PHP in the back end.The second, a coupon
-                                redemption application for pharmacies, using Ant Design in the front
-                                end and Express in the back end.
-                            </ReadMore>
-                        </Box>
+                        <Experience
+                            startDate="Jan 2018"
+                            endDate="Dec 2019"
+                            company="Clariti Chile"
+                            location="Remote"
+                            position="Fullstack Developer">
+                            Developed 2 applications, fullstack. The first, a mobile and web
+                            application for vehicle inspections, using React Native and React.js in
+                            the front end and Lumen PHP in the back end.The second, a coupon
+                            redemption application for pharmacies, using Ant Design in the front end
+                            and Express in the back end.
+                        </Experience>
                     </Flex>
                 </Flex>
             </Flex>

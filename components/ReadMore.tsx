@@ -35,6 +35,7 @@ const ReadMore: FC = ({ children }) => {
                 <Flex
                     flexDirection="row"
                     alignItems="center"
+                    pt={1}
                     width="fit-content"
                     onClick={() => toggleShow(!show)}
                     style={{ cursor: 'pointer' }}>
