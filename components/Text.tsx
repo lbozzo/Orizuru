@@ -10,7 +10,7 @@ const Text = styled('p')<TextProps>(
         fontSize: 1,
         fontFamily: 'sans-serif',
         color: 'gray.800',
-        lineHeight: 1.5
+        lineHeight: 1.618
     }),
     compose(color, typography)
 );
