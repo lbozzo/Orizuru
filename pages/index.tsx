@@ -129,6 +129,7 @@ export default function Home(): JSX.Element {
                                     <Text
                                         textAlign={{ _: 'center', md: 'right' }}
                                         lineHeight={2}
+                                        fontWeight="medium"
                                         color="inherit">
                                         lucasbozzo03@gmail.com
                                     </Text>
