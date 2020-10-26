@@ -1,6 +1,8 @@
+import { ArrowRightShort } from '@styled-icons/bootstrap/ArrowRightShort';
 import { HddStack } from '@styled-icons/bootstrap/HddStack';
 import { Laptop } from '@styled-icons/bootstrap/Laptop';
 import { Phone } from '@styled-icons/bootstrap/Phone';
+import { DocumentText } from '@styled-icons/ionicons-outline/DocumentText';
 import { FacebookBox } from '@styled-icons/remix-line/FacebookBox';
 import { Github } from '@styled-icons/remix-line/Github';
 import { Instagram } from '@styled-icons/remix-line/Instagram';
@@ -20,6 +22,7 @@ import Heading from '~components/Heading';
 import Icon from '~components/Icon';
 import Link from '~components/Link';
 import ProfileQR from '~components/ProfileQR';
+import ReadMore from '~components/ReadMore';
 import Text from '~components/Text';
 
 export default function Home(): JSX.Element {
@@ -44,9 +47,9 @@ export default function Home(): JSX.Element {
                                 </Heading>
                                 <Box my={2}>
                                     <Text fontSize={3}>
-                                        I&apos;m a web &amp; mobile developer, dreamer and
-                                        traveller. I&apos;m from Panama and you are welcome to my
-                                        website.
+                                        I&apos;m a web &amp; mobile developer, business analyst,
+                                        dreamer and traveller. I&apos;m from Panama and you are
+                                        welcome to my website.
                                     </Text>
                                 </Box>
                             </Box>
@@ -273,6 +276,83 @@ export default function Home(): JSX.Element {
                                 </Text>
                             </Box>
                         </Flex>
+                    </Flex>
+                </Flex>
+            </Flex>
+            <Flex
+                as="section"
+                bg="background"
+                px={{ _: 3, md: 5, lg: 6, xl: 7 }}
+                py={{ _: 4, md: 5 }}>
+                <Flex flexDirection="row" alignItems="center">
+                    <Flex flex={1} flexDirection="row" alignItems="center">
+                        <Heading>Experience</Heading>
+                        <Box px={3}>
+                            <Link href="/docs/CV.pdf" target="_blank">
+                                <DocumentText size={28} />
+                            </Link>
+                        </Box>
+                    </Flex>
+                </Flex>
+                <Flex pt={4}>
+                    <Flex mb={4}>
+                        <Text fontSize={0} fontWeight="medium">
+                            <Flex flexDirection="row" alignItems="center">
+                                <Box>AUG 2020</Box>
+                                <ArrowRightShort size={16} />
+                                <Box>OCT 2020</Box>
+                            </Flex>
+                        </Text>
+                        <Text fontSize={3}>
+                            <b>Maddot Studio</b>, Remote – Freelancer
+                        </Text>
+                        <Box pt={2} maxWidth="md">
+                            <ReadMore>
+                                Developed landing page for their design studio using Next.js,
+                                Styled-components, Framer motion and ThreeJS, including user
+                                interaction with 3D Model.
+                            </ReadMore>
+                        </Box>
+                    </Flex>
+                    <Flex mb={4}>
+                        <Text fontSize={0} fontWeight="medium">
+                            <Flex flexDirection="row" alignItems="center">
+                                <Box>APR 2017</Box>
+                                <ArrowRightShort size={16} />
+                                <Box>AUG 2019</Box>
+                            </Flex>
+                        </Text>
+                        <Text fontSize={3}>
+                            <b>Copa Airlines</b>, Panama – Business Systems Analyst
+                        </Text>
+                        <Box pt={2} maxWidth="md">
+                            <ReadMore>
+                                Worked along Human Resources and Payroll business units for 32
+                                countries. Led the release, migration and integrations of the new
+                                systems for both business areas, Oracle HCM and SQLSoftware.
+                            </ReadMore>
+                        </Box>
+                    </Flex>
+                    <Flex mb={4}>
+                        <Text fontSize={0} fontWeight="medium">
+                            <Flex flexDirection="row" alignItems="center">
+                                <Box>JAN 2018</Box>
+                                <ArrowRightShort size={16} />
+                                <Box>DEC 2019</Box>
+                            </Flex>
+                        </Text>
+                        <Text fontSize={3}>
+                            <b>Clariti Chile</b>, Remote – Software Developer
+                        </Text>
+                        <Box pt={2} maxWidth="md">
+                            <ReadMore>
+                                Developed 2 applications, fullstack. The first, a mobile and web
+                                application for vehicle inspections, using React Native and React.js
+                                in the front end and Lumen PHP in the back end.The second, a coupon
+                                redemption application for pharmacies, using Ant Design in the front
+                                end and Express in the back end.
+                            </ReadMore>
+                        </Box>
                     </Flex>
                 </Flex>
             </Flex>
