@@ -288,7 +288,10 @@ export default function Home(): JSX.Element {
                     <Flex flex={1} flexDirection="row" alignItems="center">
                         <Heading>Experience</Heading>
                         <Box px={3}>
-                            <Link href="/docs/CV.pdf" target="_blank">
+                            <Link
+                                aria-label="Download CV"
+                                href="https://drive.google.com/file/d/1xStKeGkU5knbGqNZf1m30i-XNYYcut6W/view?usp=sharing"
+                                target="_blank">
                                 <DocumentText size={28} />
                             </Link>
                         </Box>
