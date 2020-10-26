@@ -70,43 +70,49 @@ export default function Home(): JSX.Element {
                             my={1}
                             mx={{ _: -2, lg: -3 }}>
                             <Link
+                                aria-label="Connect with me on LinkedIn"
                                 href="https://www.linkedin.com/in/lucas-bozzo/"
                                 target="_blank"
                                 hoverColor="linkedin"
-                                mx={{ _: 2, lg: 3 }}>
-                                <Icon
-                                    icon={LinkedinBox}
-                                    size={24}
-                                    title="Connect with me on LinkedIn"
-                                />
+                                mx={{ _: 2, lg: 3 }}
+                                rel="noreferrer">
+                                <Icon icon={LinkedinBox} size={24} />
                             </Link>
                             <Link
+                                aria-label="Star me on Github"
                                 href="https://github.com/lbozzo"
                                 target="_blank"
                                 hoverColor="github"
-                                mx={{ _: 2, lg: 3 }}>
-                                <Icon icon={Github} size={24} title="Star me on Github" />
+                                mx={{ _: 2, lg: 3 }}
+                                rel="noreferrer">
+                                <Icon icon={Github} size={24} />
                             </Link>
                             <Link
+                                aria-label="Follow me on Instagram"
                                 href="https://www.instagram.com/lucasbozzo"
                                 target="_blank"
                                 hoverColor="instagram"
-                                mx={{ _: 2, lg: 3 }}>
-                                <Icon icon={Instagram} size={24} title="Follow me on Instagram" />
+                                mx={{ _: 2, lg: 3 }}
+                                rel="noreferrer">
+                                <Icon icon={Instagram} size={24} />
                             </Link>
                             <Link
+                                aria-label="Follow me on Facebook"
                                 href="https://www.facebook.com/lucas.jose.bozzo/"
                                 target="_blank"
                                 hoverColor="facebook"
-                                mx={{ _: 2, lg: 3 }}>
-                                <Icon icon={FacebookBox} size={24} title="Follow me on Facebook" />
+                                mx={{ _: 2, lg: 3 }}
+                                rel="noreferrer">
+                                <Icon icon={FacebookBox} size={24} />
                             </Link>
                             <Link
+                                aria-label="Follow me on Twitter"
                                 href="https://twitter.com/ljbozzo"
                                 target="_blank"
                                 hoverColor="twitter"
-                                mx={{ _: 2, lg: 3 }}>
-                                <Icon icon={Twitter} size={24} title="Follow me on Twitter" />
+                                mx={{ _: 2, lg: 3 }}
+                                rel="noreferrer">
+                                <Icon icon={Twitter} size={24} />
                             </Link>
                         </Flex>
 
@@ -291,7 +297,8 @@ export default function Home(): JSX.Element {
                             <Link
                                 aria-label="Download CV"
                                 href="https://drive.google.com/file/d/1xStKeGkU5knbGqNZf1m30i-XNYYcut6W/view?usp=sharing"
-                                target="_blank">
+                                target="_blank"
+                                rel="noreferrer">
                                 <DocumentText size={28} />
                             </Link>
                         </Box>
@@ -396,59 +403,49 @@ export default function Home(): JSX.Element {
                                         justifyContent="flex-start"
                                         mx={{ _: -2 }}>
                                         <Link
+                                            aria-label="Connect with me on LinkedIn"
                                             href="https://www.linkedin.com/in/lucas-bozzo/"
                                             target="_blank"
                                             hoverColor="linkedin"
-                                            mx={{ _: 2 }}>
-                                            <Icon
-                                                icon={LinkedinBox}
-                                                size={20}
-                                                title="Connect with me on LinkedIn"
-                                            />
+                                            mx={{ _: 2 }}
+                                            rel="noreferrer">
+                                            <Icon icon={LinkedinBox} size={20} />
                                         </Link>
                                         <Link
+                                            aria-label="Star me on Github"
                                             href="https://github.com/lbozzo"
                                             target="_blank"
                                             hoverColor="github"
-                                            mx={{ _: 2 }}>
-                                            <Icon
-                                                icon={Github}
-                                                size={20}
-                                                title="Star me on Github"
-                                            />
+                                            mx={{ _: 2 }}
+                                            rel="noreferrer">
+                                            <Icon icon={Github} size={20} />
                                         </Link>
                                         <Link
+                                            aria-label="Follow me on Instagram"
                                             href="https://www.instagram.com/lucasbozzo"
                                             target="_blank"
                                             hoverColor="instagram"
-                                            mx={{ _: 2 }}>
-                                            <Icon
-                                                icon={Instagram}
-                                                size={20}
-                                                title="Follow me on Instagram"
-                                            />
+                                            mx={{ _: 2 }}
+                                            rel="noreferrer">
+                                            <Icon icon={Instagram} size={20} />
                                         </Link>
                                         <Link
+                                            aria-label="Follow me on Facebook"
                                             href="https://www.facebook.com/lucas.jose.bozzo/"
                                             target="_blank"
                                             hoverColor="facebook"
-                                            mx={{ _: 2 }}>
-                                            <Icon
-                                                icon={FacebookBox}
-                                                size={20}
-                                                title="Follow me on Facebook"
-                                            />
+                                            mx={{ _: 2 }}
+                                            rel="noreferrer">
+                                            <Icon icon={FacebookBox} size={20} />
                                         </Link>
                                         <Link
+                                            aria-label="Follow me on Twitter"
                                             href="https://twitter.com/ljbozzo"
                                             target="_blank"
                                             hoverColor="twitter"
-                                            mx={{ _: 2 }}>
-                                            <Icon
-                                                icon={Twitter}
-                                                size={20}
-                                                title="Follow me on Twitter"
-                                            />
+                                            mx={{ _: 2 }}
+                                            rel="noreferrer">
+                                            <Icon icon={Twitter} size={20} />
                                         </Link>
                                     </Flex>
                                 </Flex>
