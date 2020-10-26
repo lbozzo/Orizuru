@@ -134,11 +134,13 @@ export default function Home(): JSX.Element {
                 <Heading>What do I do?</Heading>
                 <Flex flexDirection={{ _: 'column', lg: 'row' }} mx={{ _: 0, lg: -4 }}>
                     <Flex flex={1} pt={4} mx={4}>
-                        <Icon icon={Laptop} size={32} />
+                        <Box color="gray.900">
+                            <Icon icon={Laptop} size={32} />
+                        </Box>
                         <Box pt={2}>
                             <Box py={1}>
                                 <Heading as="h3" fontSize={4} fontWeight="medium">
-                                    Website
+                                    Websites
                                 </Heading>
                             </Box>
                             <Text textAlign="left">
@@ -148,7 +150,9 @@ export default function Home(): JSX.Element {
                         </Box>
                     </Flex>
                     <Flex flex={1} pt={4} mx={4}>
-                        <Icon icon={Phone} size={32} />
+                        <Box color="gray.900">
+                            <Icon icon={Phone} size={32} />
+                        </Box>
                         <Box pt={2}>
                             <Box py={1}>
                                 <Heading as="h3" fontSize={4} fontWeight="medium">
@@ -162,7 +166,9 @@ export default function Home(): JSX.Element {
                         </Box>
                     </Flex>
                     <Flex flex={1} pt={4} mx={4}>
-                        <Icon icon={HddStack} size={32} />
+                        <Box color="gray.900">
+                            <Icon icon={HddStack} size={32} />
+                        </Box>
                         <Box pt={2}>
                             <Box py={1}>
                                 <Heading as="h3" fontSize={4} fontWeight="medium">
@@ -191,7 +197,9 @@ export default function Home(): JSX.Element {
                             mx={4}
                             flexDirection={{ _: 'column', md: 'row' }}
                             alignItems="center">
-                            <Icon icon={NextDotJs} size={40} />
+                            <Box color="gray.900">
+                                <Icon icon={NextDotJs} size={40} />
+                            </Box>
                             <Box mx={2}>
                                 <Text textAlign={{ _: 'center', md: 'left' }} fontSize={2}>
                                     Next.js
@@ -306,7 +314,7 @@ export default function Home(): JSX.Element {
                 </Flex>
                 <Flex pt={4}>
                     <Flex mb={4}>
-                        <Text fontSize={0} fontWeight="medium">
+                        <Text color="gray.700" fontSize={0} fontWeight="medium">
                             <Flex flexDirection="row" alignItems="center">
                                 <Box>AUG 2020</Box>
                                 <ArrowRightShort size={16} />
@@ -325,7 +333,7 @@ export default function Home(): JSX.Element {
                         </Box>
                     </Flex>
                     <Flex mb={4}>
-                        <Text fontSize={0} fontWeight="medium">
+                        <Text color="gray.700" fontSize={0} fontWeight="medium">
                             <Flex flexDirection="row" alignItems="center">
                                 <Box>APR 2017</Box>
                                 <ArrowRightShort size={16} />
@@ -344,7 +352,7 @@ export default function Home(): JSX.Element {
                         </Box>
                     </Flex>
                     <Flex mb={4}>
-                        <Text fontSize={0} fontWeight="medium">
+                        <Text color="gray.700" fontSize={0} fontWeight="medium">
                             <Flex flexDirection="row" alignItems="center">
                                 <Box>JAN 2018</Box>
                                 <ArrowRightShort size={16} />
@@ -456,7 +464,7 @@ export default function Home(): JSX.Element {
                         flex={1}
                         my={{ _: 3, md: 3 }}
                         mx={{ _: 0, md: 3 }}
-                        bg="black"
+                        bg="gray.900"
                         color="white">
                         <Box py={4} px={5}>
                             Contact form coming soon!
@@ -465,7 +473,7 @@ export default function Home(): JSX.Element {
                 </Flex>
             </Flex>
             <Flex py={2} bg="background">
-                <Text textAlign="center" fontSize={0}>
+                <Text color="gray.600" textAlign="center" fontSize={0}>
                     Copyright &reg; {new Date().getFullYear()}. All rights reserved.
                 </Text>
             </Flex>

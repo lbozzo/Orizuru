@@ -9,7 +9,7 @@ const Heading = styled('h2')<HeadingProps>(
         fontFamily: 'sans-serif',
         fontSize: 5,
         fontWeight: 'bold',
-        color: 'text',
+        color: 'gray.900',
         lineHeight: [1.2, 1.2, 1.5]
     }),
     compose(typography, color)

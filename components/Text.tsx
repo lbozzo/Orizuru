@@ -9,7 +9,7 @@ const Text = styled('p')<TextProps>(
         fontWeight: 'normal',
         fontSize: 1,
         fontFamily: 'sans-serif',
-        color: 'text',
+        color: 'gray.800',
         lineHeight: 1.5
     }),
     compose(color, typography)
