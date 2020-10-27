@@ -8,22 +8,16 @@ import Flex from './Flex';
 import Text from './Text';
 
 const ProfileQR = (): JSX.Element => {
-    const [show, toggleShow] = useState(false);
+    const [showQR, toggleShowQR] = useState<boolean>(false);
     return (
-        <Box onClick={() => toggleShow(!show)}>
+        <Box onClick={() => toggleShowQR(!showQR)}>
             <Flex borderRadius={6} overflow="hidden" boxShadow="medium">
-                <Box position="relative" width={{ _: 225, lg: 300 }} height={{ _: 225, lg: 300 }}>
-                    <Box position="absolute" bg="black" width="100%" height="100%" opacity={+show}>
-                        <Box m={1}>
-                            <Image
-                                alt="QR Contact"
-                                src="/assets/images/qrcontact.svg"
-                                width={300}
-                                height={300}
-                            />
-                        </Box>
-                    </Box>
-                    <Box width="100%" height="100%" opacity={+!show}>
+                <Box
+                    position="relative"
+                    width={{ _: 225, lg: 300 }}
+                    height={{ _: 225, lg: 300 }}
+                    bg="gray.100">
+                    <Box position="absolute" style={{ display: showQR ? 'none' : 'block' }}>
                         <style global jsx>{`
                             .profile-photo {
                                 object-fit: cover;
@@ -35,12 +29,23 @@ const ProfileQR = (): JSX.Element => {
                             width={300}
                             height={300}
                             className="profile-photo"
+                            quality={85}
+                            priority
+                        />
+                    </Box>
+                    <Box position="absolute" style={{ display: showQR ? 'block' : 'none' }}>
+                        <Image
+                            alt="QR Contact"
+                            src="/assets/images/qrcontact.svg"
+                            width={300}
+                            height={300}
+                            priority
                         />
                     </Box>
                 </Box>
             </Flex>
 
-            {!show ? (
+            {!showQR ? (
                 <Flex flexDirection="row" alignItems="center" justifyContent="center" py={1}>
                     <Arrow90degUp size={16} />
                     <Box px={1}>

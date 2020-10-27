@@ -14,6 +14,7 @@ import { NodeDotJs } from '@styled-icons/simple-icons/NodeDotJs';
 import { ReactLogo } from '@styled-icons/simple-icons/ReactLogo';
 import { StyledComponents } from '@styled-icons/simple-icons/StyledComponents';
 import { Typescript } from '@styled-icons/simple-icons/Typescript';
+import dynamic from 'next/dynamic';
 
 import Box from '~components/Box';
 import Experience from '~components/Experience';
@@ -21,9 +22,10 @@ import Flex from '~components/Flex';
 import Heading from '~components/Heading';
 import Icon from '~components/Icon';
 import Link from '~components/Link';
-import ProfileQR from '~components/ProfileQR';
 import Skill from '~components/Skill';
 import Text from '~components/Text';
+
+const ProfileQR = dynamic(() => import('~components/ProfileQR'));
 
 export default function Home(): JSX.Element {
     return (
