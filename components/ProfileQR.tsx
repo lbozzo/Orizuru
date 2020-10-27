@@ -35,7 +35,6 @@ const ProfileQR = (): JSX.Element => {
                             width={300}
                             height={300}
                             className="profile-photo"
-                            quality={100}
                         />
                     </Box>
                 </Box>
