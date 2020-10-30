@@ -1,47 +1,50 @@
 import { Arrow90degUp } from '@styled-icons/bootstrap/Arrow90degUp';
 import { Scan } from '@styled-icons/boxicons-regular/Scan';
+import css from '@styled-system/css';
 import Image from 'next/image';
 import { useState } from 'react';
+import styled from 'styled-components';
 
 import Box from './Box';
 import Flex from './Flex';
 import Text from './Text';
 
+const CoverImage = styled(Image)(
+    css({
+        objectFit: 'cover'
+    })
+);
 const ProfileQR = (): JSX.Element => {
     const [showQR, toggleShowQR] = useState<boolean>(false);
+    const width = 275;
+    const height = 275;
     return (
         <Box onClick={() => toggleShowQR(!showQR)}>
-            <Flex borderRadius={6} overflow="hidden" boxShadow="medium">
-                <Box
-                    position="relative"
-                    width={{ _: 225, lg: 300 }}
-                    height={{ _: 225, lg: 300 }}
-                    bg="gray.100">
-                    <Box position="absolute" style={{ display: showQR ? 'none' : 'block' }}>
-                        <style global jsx>{`
-                            .profile-photo {
-                                object-fit: cover;
-                            }
-                        `}</style>
-                        <Image
-                            alt="Profile"
-                            src="/assets/images/profile.jpg"
-                            width={300}
-                            height={300}
-                            className="profile-photo"
-                            quality={85}
-                            priority
-                        />
-                    </Box>
-                    <Box position="absolute" style={{ display: showQR ? 'block' : 'none' }}>
-                        <Image
-                            alt="QR Contact"
-                            src="/assets/images/qrcontact.svg"
-                            width={300}
-                            height={300}
-                            priority
-                        />
-                    </Box>
+            <Flex
+                position="relative"
+                borderRadius={6}
+                width={width}
+                height={height}
+                overflow="hidden"
+                boxShadow="medium">
+                <Box position="absolute" style={{ opacity: showQR ? 0 : 1 }}>
+                    <CoverImage
+                        alt="Profile"
+                        src="/assets/images/profile.jpg"
+                        width={width}
+                        height={height}
+                        quality={85}
+                        priority
+                    />
+                </Box>
+                <Box position="absolute" style={{ opacity: showQR ? 1 : 0 }}>
+                    <CoverImage
+                        alt="QR Contact"
+                        src="/assets/images/qrcontact.svg"
+                        width={width}
+                        height={height}
+                        quality={100}
+                    />
                 </Box>
             </Flex>
 
