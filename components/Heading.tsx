@@ -9,11 +9,8 @@ const Heading = styled('h2')<HeadingProps>(
         fontFamily: 'sans-serif',
         fontSize: 5,
         fontWeight: 'bold',
-        color: 'gray.900',
-        lineHeight: [1.618],
-        '&:hover': {
-            color: 'primary'
-        }
+        color: 'primary',
+        lineHeight: [1.618]
     }),
     compose(typography, color)
 );
