@@ -1,11 +1,21 @@
 import { ExpandLess } from '@styled-icons/material-rounded/ExpandLess';
 import { ExpandMore } from '@styled-icons/material-rounded/ExpandMore';
+import css from '@styled-system/css';
 import { createRef, FC, useEffect, useState } from 'react';
+import styled from 'styled-components';
 
 import Box from './Box';
 import Flex from './Flex';
 import Link from './Link';
 import Text from './Text';
+
+const ReadMoreText = styled(Text)<{ show: boolean }>(({ show = false }) =>
+    css({
+        overflow: 'hidden',
+        textOverflow: 'ellipsis',
+        whiteSpace: show ? 'normal' : 'nowrap'
+    })
+);
 
 const ReadMore: FC = ({ children }) => {
     const [show, toggleShow] = useState(false);
@@ -23,15 +33,9 @@ const ReadMore: FC = ({ children }) => {
     }, []);
     return (
         <Box>
-            <Text
-                ref={textRef}
-                style={{
-                    overflow: 'hidden',
-                    textOverflow: 'ellipsis',
-                    whiteSpace: show ? 'normal' : 'nowrap'
-                }}>
+            <ReadMoreText ref={textRef} show={show}>
                 {children}
-            </Text>
+            </ReadMoreText>
             {(ellipsis || show) && (
                 <Box width="fit-content">
                     <Link as="div">
@@ -42,7 +46,7 @@ const ReadMore: FC = ({ children }) => {
                             width="fit-content"
                             onClick={() => toggleShow(!show)}
                             style={{ cursor: 'pointer' }}>
-                            <Text fontWeight="medium" color="inherit">
+                            <Text fontSize={1} fontWeight="medium" color="primary">
                                 {show ? 'Show less' : 'Show more'}
                             </Text>
                             {show ? <ExpandLess size={22} /> : <ExpandMore size={22} />}
