@@ -24,7 +24,7 @@ export default function Home(): JSX.Element {
                 <Box as="nav">
                     <Nav />
                 </Box>
-                <Flex flex={1} px={[4, 5, 5, 6]} py={5}>
+                <Flex flex={1} px={[4, 4, 5, 6]} py={5}>
                     <Box width="100%" maxWidth="lg" mx="auto">
                         <Flex
                             flex={1}
@@ -32,7 +32,7 @@ export default function Home(): JSX.Element {
                             height="100%"
                             alignItems="center"
                             justifyContent="space-between">
-                            <Box width={['100%', 1 / 2]}>
+                            <Box width={['100%', '100%', '100%', 1 / 2]}>
                                 <Heading
                                     as="h1"
                                     lineHeight={{ _: 1, md: 1.618 }}
@@ -61,8 +61,10 @@ export default function Home(): JSX.Element {
                                     </Text>
                                 </Box>
                             </Box>
-                            <Box width={['100%', 1 / 2]}>
-                                <Flex flexDirection="column" alignItems={['center', 'flex-end']}>
+                            <Box width={['100%', '100%', '100%', 1 / 2]}>
+                                <Flex
+                                    flexDirection="column"
+                                    alignItems={['center', 'center', 'center', 'flex-end']}>
                                     <ProfileQR />
                                 </Flex>
                             </Box>
@@ -73,18 +75,18 @@ export default function Home(): JSX.Element {
                             flexWrap="wrap"
                             alignItems="center"
                             justifyContent="space-between">
-                            <Box width={['100%', 1 / 2]}>
+                            <Box width={['100%', '100%', 1 / 2]}>
                                 <Flex
                                     flexDirection="row"
-                                    justifyContent={['center', 'flex-start']}
+                                    justifyContent={['center', 'center', 'flex-start']}
                                     py={2}>
                                     <SocialLinkStrip size={26} />
                                 </Flex>
                             </Box>
                             <Box
-                                width={['100%', 1 / 2]}
+                                width={['100%', '100%', 1 / 2]}
                                 py={2}
-                                sx={{ textAlign: ['center', 'right'] }}>
+                                sx={{ textAlign: ['center', 'center', 'right'] }}>
                                 <Link
                                     href="mailto:lucasbozzo03@gmail.com?subject=Hi Lucas! Let's get in touch"
                                     sx={{
@@ -103,10 +105,10 @@ export default function Home(): JSX.Element {
                 </Flex>
             </Flex>
             <Box as="section" width="100%" maxWidth="lg" mx="auto">
-                <Box px={[4, 5, 5, 0]} py={5}>
+                <Box px={[4, 4, 5, 0]} py={5}>
                     <Heading as="h2">What do I do?</Heading>
                     <Flex flexDirection="row" flexWrap="wrap" alignItems="flex-start" mx={[0, -4]}>
-                        <Box width={['100%', 1 / 3]} pt={4} px={[0, 4]}>
+                        <Box width={['100%', '100%', '100%', 1 / 3]} pt={4} px={[0, 4]}>
                             <Service
                                 icon={Laptop}
                                 title="Websites"
@@ -114,7 +116,7 @@ export default function Home(): JSX.Element {
                                         preferred tools are Next.js and styled-components."
                             />
                         </Box>
-                        <Box width={['100%', 1 / 3]} pt={4} px={[0, 4]}>
+                        <Box width={['100%', '100%', '100%', 1 / 3]} pt={4} px={[0, 4]}>
                             <Service
                                 icon={Phone}
                                 title="Mobile"
@@ -122,7 +124,7 @@ export default function Home(): JSX.Element {
                                     systems. I use React Native."
                             />
                         </Box>
-                        <Box width={['100%', 1 / 3]} pt={4} px={[0, -4]}>
+                        <Box width={['100%', '100%', '100%', 1 / 3]} pt={4} px={[0, 4]}>
                             <Service
                                 icon={HddStack}
                                 title="API"
@@ -134,7 +136,7 @@ export default function Home(): JSX.Element {
                 </Box>
             </Box>
             <Box as="section" width="100%" maxWidth="lg" mx="auto">
-                <Box px={[4, 5, 5, 0]} py={5}>
+                <Box px={[4, 4, 5, 0]} py={5}>
                     <Heading as="h2">Experience</Heading>
                     <Box py={3}>
                         <Experience
@@ -177,7 +179,7 @@ export default function Home(): JSX.Element {
                 </Box>
             </Box>
             <Box as="section" width="100%" maxWidth="lg" mx="auto">
-                <Box px={[4, 5, 5, 0]} py={5}>
+                <Box px={[4, 4, 5, 0]} py={5}>
                     <Heading as="h2" textAlign="center">
                         Skills
                     </Heading>
@@ -210,7 +212,7 @@ export default function Home(): JSX.Element {
                 </Box>
             </Box>
             <Box as="section" width="100%" maxWidth="lg" mx="auto">
-                <Box px={[4, 5, 5, 0]} py={5}>
+                <Box px={[4, 4, 5, 0]} py={5}>
                     <Heading as="h2">Just say Hello!</Heading>
                     <Box py={[2, 4]}>
                         <Text variant="body">
@@ -219,7 +221,7 @@ export default function Home(): JSX.Element {
                         </Text>
                     </Box>
                     <Flex flexDirection="row" flexWrap="wrap">
-                        <Box width={['100%', 1 / 2]}>
+                        <Box width={['100%', '100%', 1 / 2]}>
                             <Box py={1}>
                                 <Text variant="body" fontSize={1} color="primary">
                                     Mail me at
@@ -236,7 +238,7 @@ export default function Home(): JSX.Element {
                                 <Text variant="body">lucasbozzo03@gmail.com</Text>
                             </Link>
                         </Box>
-                        <Box width={['100%', 1 / 2]}>
+                        <Box width={['100%', '100%', 1 / 2]}>
                             <Box py={1}>
                                 <Text variant="body" fontSize={1} color="primary">
                                     Follow me
