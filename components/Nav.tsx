@@ -1,4 +1,3 @@
-import css from '@styled-system/css';
 import {
     motion,
     useCycle,
@@ -7,8 +6,7 @@ import {
     useViewportScroll
 } from 'framer-motion';
 import NLink from 'next/link';
-import { Box, Flex, Link, Text } from 'rebass/styled-components';
-import styled from 'styled-components';
+import { Box, Flex, Link } from 'rebass/styled-components';
 
 import ThemeToggle from './ThemeToggle';
 
@@ -16,7 +14,7 @@ const Path = (props) => (
     <motion.path
         fill="transparent"
         strokeWidth="3"
-        stroke="hsl(0, 0%, 18%)"
+        stroke="currentcolor"
         strokeLinecap="round"
         {...props}
     />
@@ -27,7 +25,7 @@ export const MenuToggle = ({
 }: {
     toggle: (event: React.MouseEvent<HTMLElement>) => void;
 }): JSX.Element => (
-    <Box as="button" onClick={toggle}>
+    <Box as="button" onClick={toggle} color="gray.900">
         <svg width="23" height="23" viewBox="0 0 23 23">
             <Path
                 variants={{
@@ -113,7 +111,7 @@ const Nav = (): JSX.Element => {
                             </NLink>
                         </Box>
                     </Flex>
-                    <Box display={['none', 'block']}>
+                    <Box display={['none', 'none', 'block']}>
                         <Flex flexDirection="row" alignItems="center">
                             <NLink href="/blog" passHref>
                                 <Link variant="nav">blog</Link>
@@ -129,7 +127,7 @@ const Nav = (): JSX.Element => {
                             </NLink>
                         </Flex>
                     </Box>
-                    <Box display={['block', 'none']}>
+                    <Box display={['block', 'block', 'none']}>
                         <MenuToggle toggle={() => toggleOpen()} />
                     </Box>
                 </Flex>
