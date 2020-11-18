@@ -1,23 +1,18 @@
 import { ExpandLess } from '@styled-icons/material-rounded/ExpandLess';
 import { ExpandMore } from '@styled-icons/material-rounded/ExpandMore';
-import css from '@styled-system/css';
 import { createRef, FC, useEffect, useState } from 'react';
-import styled from 'styled-components';
+import { Box, Flex, Text } from 'rebass/styled-components';
 
-import Box from './Box';
-import Flex from './Flex';
-import Link from './Link';
-import Text from './Text';
+export interface ReadMoreProps {
+    textShow?: string;
+    textHide?: string;
+}
 
-const ReadMoreText = styled(Text)<{ show: boolean }>(({ show = false }) =>
-    css({
-        overflow: 'hidden',
-        textOverflow: 'ellipsis',
-        whiteSpace: show ? 'normal' : 'nowrap'
-    })
-);
-
-const ReadMore: FC = ({ children }) => {
+const ReadMore: FC<ReadMoreProps> = ({
+    children,
+    textShow = 'Show more',
+    textHide = 'Show less'
+}) => {
     const [show, toggleShow] = useState(false);
     const [ellipsis, setEllipsis] = useState(false);
     const textRef = createRef<HTMLParagraphElement>();
@@ -32,13 +27,27 @@ const ReadMore: FC = ({ children }) => {
         }
     }, []);
     return (
-        <Box>
-            <ReadMoreText ref={textRef} show={show}>
+        <Box aria-expanded={show}>
+            <Text
+                ref={textRef}
+                variant="body"
+                color="gray.700"
+                style={{
+                    overflow: 'hidden',
+                    textOverflow: 'ellipsis',
+                    whiteSpace: show ? 'normal' : 'nowrap'
+                }}
+                title={children.toString()}>
                 {children}
-            </ReadMoreText>
+            </Text>
             {(ellipsis || show) && (
                 <Box width="fit-content">
-                    <Link as="div">
+                    <Text
+                        as="button"
+                        variant="body"
+                        fontSize={1}
+                        fontWeight="medium"
+                        color="primary">
                         <Flex
                             flexDirection="row"
                             alignItems="center"
@@ -46,12 +55,10 @@ const ReadMore: FC = ({ children }) => {
                             width="fit-content"
                             onClick={() => toggleShow(!show)}
                             style={{ cursor: 'pointer' }}>
-                            <Text fontSize={1} fontWeight="medium" color="primary">
-                                {show ? 'Show less' : 'Show more'}
-                            </Text>
+                            {show ? textHide : textShow}
                             {show ? <ExpandLess size={22} /> : <ExpandMore size={22} />}
                         </Flex>
-                    </Link>
+                    </Text>
                 </Box>
             )}
         </Box>

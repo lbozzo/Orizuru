@@ -1,12 +1,10 @@
 import { ArrowRightShort } from '@styled-icons/bootstrap/ArrowRightShort';
 import css from '@styled-system/css';
 import { FC } from 'react';
+import { Box, Flex, Heading, Text } from 'rebass/styled-components';
 import styled from 'styled-components';
 
-import Box from './Box';
-import Flex from './Flex';
 import ReadMore from './ReadMore';
-import Text from './Text';
 
 export interface ExperienceProps {
     startDate: string;
@@ -19,10 +17,10 @@ export interface ExperienceProps {
 const Date = styled(Text)(
     css({
         fontSize: 0,
-        fontWeight: 'medium',
+        fontWeight: 'bold',
+        fontFamily: 'body',
         textTransform: 'uppercase',
-        color: 'gray.700',
-        lineHeight: 1
+        color: 'gray.700'
     })
 );
 
@@ -40,11 +38,18 @@ const Experience: FC<ExperienceProps> = ({
             <ArrowRightShort size={16} />
             <Date>{endDate}</Date>
         </Flex>
-        <Text lineHeight={2} fontSize={3}>
-            <b>{company}</b>, {location} – {position}
-        </Text>
+        <Box py={1}>
+            <Heading as="p" fontSize={3} fontWeight="medium">
+                <Heading as="span" fontSize="inherit" fontWeight="bold" color="gray.800">
+                    {company}
+                </Heading>
+                , {location} – {position}
+            </Heading>
+        </Box>
         <Box maxWidth="md">
-            <ReadMore>{children}</ReadMore>
+            <ReadMore textShow="Read more" textHide="Read less">
+                {children}
+            </ReadMore>
         </Box>
     </Box>
 );

@@ -14,20 +14,25 @@ import {
 
 export interface LinkProps extends ColorProps, SpaceProps, TypographyProps {
     hoverColor?: string;
+    decorated?: boolean;
 }
 
 const Link = styled('a')<LinkProps>(
-    ({ hoverColor, ...props }) =>
+    ({ hoverColor, decorated = false, ...props }) =>
         css({
             cursor: 'pointer',
-            display: 'flex',
+            display: 'inline-block',
             flexDirection: 'row',
             justifyContent: 'center',
             alignContent: 'center',
+            textDecoration: decorated ? 'underline' : 'none',
             lineHeight: 2,
-            color: 'text',
+            color: 'gray.900',
             '&:hover': {
                 color: hoverColor || themeGet('colors.primary', '#000')(props)
+            },
+            '&:focus, &:active, &:visited': {
+                textDecoration: decorated ? 'underline' : 'none'
             }
         }),
     compose(color, space, typography)

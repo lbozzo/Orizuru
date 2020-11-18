@@ -3,11 +3,8 @@ import { Scan } from '@styled-icons/boxicons-regular/Scan';
 import css from '@styled-system/css';
 import Image from 'next/image';
 import { useState } from 'react';
+import { Box, Flex, Text } from 'rebass/styled-components';
 import styled from 'styled-components';
-
-import Box from './Box';
-import Flex from './Flex';
-import Text from './Text';
 
 const CoverImage = styled(Image)(
     css({
@@ -21,13 +18,15 @@ const ProfileQR = (): JSX.Element => {
     return (
         <Box onClick={() => toggleShowQR(!showQR)}>
             <Flex
-                position="relative"
-                borderRadius={6}
                 width={width}
                 height={height}
                 overflow="hidden"
-                boxShadow="medium">
-                <Box position="absolute" style={{ opacity: showQR ? 0 : 1 }}>
+                sx={{
+                    position: 'relative',
+                    borderRadius: 6,
+                    boxShadow: '0px 0px 12px rgba(24,24,24,0.3)'
+                }}>
+                <Box opacity={showQR ? 0 : 1} sx={{ position: 'absolute' }}>
                     <CoverImage
                         alt="Profile"
                         src="/assets/images/profile.jpg"
@@ -37,7 +36,7 @@ const ProfileQR = (): JSX.Element => {
                         priority
                     />
                 </Box>
-                <Box position="absolute" style={{ opacity: showQR ? 1 : 0 }}>
+                <Box opacity={showQR ? 1 : 0} sx={{ position: 'absolute' }}>
                     <CoverImage
                         alt="QR Contact"
                         src="/assets/images/qrcontact.svg"
@@ -52,7 +51,7 @@ const ProfileQR = (): JSX.Element => {
                 <Flex flexDirection="row" alignItems="center" justifyContent="center" py={1}>
                     <Arrow90degUp size={16} />
                     <Box px={1}>
-                        <Text fontSize={0} fontWeight="medium" lineHeight={1}>
+                        <Text variant="body" fontSize={0} fontWeight="medium">
                             Click me
                         </Text>
                     </Box>
@@ -61,7 +60,7 @@ const ProfileQR = (): JSX.Element => {
                 <Flex flexDirection="row" alignItems="center" justifyContent="center" py={1}>
                     <Scan size={16} />
                     <Box px={1}>
-                        <Text fontSize={0} fontWeight="medium" lineHeight={1}>
+                        <Text variant="body" fontSize={0} fontWeight="medium">
                             Scan me
                         </Text>
                     </Box>
