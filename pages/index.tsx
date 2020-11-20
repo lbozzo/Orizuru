@@ -8,10 +8,10 @@ import { NodeDotJs } from '@styled-icons/simple-icons/NodeDotJs';
 import { ReactLogo } from '@styled-icons/simple-icons/ReactLogo';
 import { StyledComponents } from '@styled-icons/simple-icons/StyledComponents';
 import { Typescript } from '@styled-icons/simple-icons/Typescript';
-import { Heart } from '@styled-icons/zondicons/Heart';
 import { Box, Flex, Heading, Link, Text } from 'rebass/styled-components';
 
 import Experience from '~components/Experience';
+import HeartBeat from '~components/HeartBeat';
 import Nav from '~components/Nav';
 import ProfileQR from '~components/ProfileQR';
 import Service from '~components/Service';
@@ -208,7 +208,7 @@ export default function Home(): JSX.Element {
                         </Box>
                     </Flex>
                     <Text variant="body" textAlign="center" color="gray.600">
-                        I <Heart size={16} color="#EF4646" /> Open Source
+                        I <HeartBeat size={16} color="#EF4646" /> Open Source
                     </Text>
                 </Box>
             </Box>
