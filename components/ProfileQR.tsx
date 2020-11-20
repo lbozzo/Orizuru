@@ -26,23 +26,24 @@ const ProfileQR = (): JSX.Element => {
                     borderRadius: 6,
                     boxShadow: '0px 0px 12px rgba(24,24,24,0.3)'
                 }}>
-                <Box opacity={showQR ? 0 : 1} sx={{ position: 'absolute' }}>
-                    <CoverImage
+                <Box opacity={showQR ? 0 : 1}>
+                    <Image
                         alt="Profile"
                         src="/assets/images/profile.jpg"
-                        width={width}
-                        height={height}
-                        quality={85}
-                        priority
+                        quality={100}
+                        layout="fill"
+                        objectFit="cover"
+                        loading="eager"
                     />
                 </Box>
-                <Box opacity={showQR ? 1 : 0} sx={{ position: 'absolute' }}>
-                    <CoverImage
+                <Box opacity={showQR ? 1 : 0}>
+                    <Image
                         alt="QR Contact"
                         src="/assets/images/qrcontact.svg"
-                        width={width}
-                        height={height}
                         quality={100}
+                        layout="fill"
+                        objectFit="cover"
+                        loading="lazy"
                     />
                 </Box>
             </Flex>
