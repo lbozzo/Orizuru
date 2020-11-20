@@ -12,7 +12,6 @@ const ThemeToggle = (): JSX.Element => {
         <Box as="button" onClick={() => setColorMode(colorMode == 'light' ? 'dark' : 'light')}>
             {colorMode == 'light' ? (
                 <Box
-                    as="button"
                     sx={{
                         color: 'gray.800',
                         transition: 'color 250ms ease-in-out',
@@ -22,7 +21,6 @@ const ThemeToggle = (): JSX.Element => {
                 </Box>
             ) : (
                 <Box
-                    as="button"
                     sx={{
                         color: 'primary',
                         transition: 'color 250ms ease-in-out',
