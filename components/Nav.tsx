@@ -122,7 +122,7 @@ const Nav = (): JSX.Element => {
                             <NLink href="/about" passHref>
                                 <Link variant="nav">about</Link>
                             </NLink>
-                            <NLink href="/contact" passHref>
+                            <NLink href="#contact" passHref>
                                 <Link variant="navButton">contact me</Link>
                             </NLink>
                         </Flex>

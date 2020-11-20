@@ -21,19 +21,19 @@ import SocialLinkStrip from '~components/SocialLinkStrip';
 export default function Home(): JSX.Element {
     return (
         <Box as="main">
-            <Flex flexDirection="column" height={['auto', '100vh']}>
+            <Flex flexDirection="column" height={['auto', 'auto', 'auto', 'auto', '100vh']}>
                 <Box as="nav">
                     <Nav />
                 </Box>
                 <Flex flex={1} px={[4, 4, 5, 6]} py={5}>
                     <Box width="100%" maxWidth="lg" mx="auto">
                         <Flex
-                            flex={1}
+                            flexDirection="row"
                             flexWrap="wrap"
                             height="100%"
                             alignItems="center"
                             justifyContent="space-between">
-                            <Box width={['100%', '100%', '100%', 1 / 2]}>
+                            <Box width={['100%', '100%', '100%', '100%', 1 / 2]}>
                                 <Heading
                                     as="h1"
                                     lineHeight={{ _: 1, md: 1.618 }}
@@ -62,10 +62,16 @@ export default function Home(): JSX.Element {
                                     </Text>
                                 </Box>
                             </Box>
-                            <Box width={['100%', '100%', '100%', 1 / 2]}>
+                            <Box width={['100%', '100%', '100%', '100%', 1 / 2]}>
                                 <Flex
                                     flexDirection="column"
-                                    alignItems={['center', 'center', 'center', 'flex-end']}>
+                                    alignItems={[
+                                        'center',
+                                        'center',
+                                        'center',
+                                        'center',
+                                        'flex-end'
+                                    ]}>
                                     <ProfileQR />
                                 </Flex>
                             </Box>
@@ -106,7 +112,7 @@ export default function Home(): JSX.Element {
                 </Flex>
             </Flex>
             <Box as="section" width="100%" maxWidth="lg" mx="auto">
-                <Box px={[4, 4, 5, 0]} py={5}>
+                <Box px={[4, 4, 5, 5, 4, 0]} py={5}>
                     <Heading as="h2">What do I do?</Heading>
                     <Flex flexDirection="row" flexWrap="wrap" alignItems="flex-start" mx={[0, -4]}>
                         <Box width={['100%', '100%', '100%', 1 / 3]} pt={4} px={[0, 4]}>
@@ -137,7 +143,7 @@ export default function Home(): JSX.Element {
                 </Box>
             </Box>
             <Box as="section" width="100%" maxWidth="lg" mx="auto">
-                <Box px={[4, 4, 5, 0]} py={5}>
+                <Box px={[4, 4, 5, 5, 4, 0]} py={5}>
                     <Heading as="h2">Experience</Heading>
                     <Box py={3}>
                         <Experience
@@ -180,7 +186,7 @@ export default function Home(): JSX.Element {
                 </Box>
             </Box>
             <Box as="section" width="100%" maxWidth="lg" mx="auto">
-                <Box px={[4, 4, 5, 0]} py={5}>
+                <Box px={[4, 4, 5, 5, 4, 0]} py={5}>
                     <Heading as="h2" textAlign="center">
                         Skills
                     </Heading>
@@ -212,8 +218,8 @@ export default function Home(): JSX.Element {
                     </Text>
                 </Box>
             </Box>
-            <Box as="section" width="100%" maxWidth="lg" mx="auto">
-                <Box px={[4, 4, 5, 0]} py={5}>
+            <Box id="contact" as="section" width="100%" maxWidth="lg" mx="auto">
+                <Box px={[4, 4, 5, 5, 4, 0]} py={5}>
                     <Heading as="h2">Just say Hello!</Heading>
                     <Box py={[2, 4]}>
                         <Text variant="body">
