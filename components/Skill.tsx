@@ -20,7 +20,8 @@ const Skill: FC<SkillProps> = ({ icon, name }) => (
             sx={{
                 transition: 'all 250ms ease-in-out',
                 ':hover': {
-                    color: 'primary'
+                    color: 'primary',
+                    transform: 'translateY(-2px)'
                 }
             }}>
             {createElement(icon, { size: 36, title: name })}
