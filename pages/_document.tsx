@@ -56,13 +56,6 @@ export default class MyDocument extends Document {
                 <Head>
                     <link
                         rel="preload"
-                        href="/assets/fonts/Inter/static/Inter-Light.ttf"
-                        as="font"
-                        type="font/ttf"
-                        crossOrigin="true"
-                    />
-                    <link
-                        rel="preload"
                         href="/assets/fonts/Inter/static/Inter-Regular.ttf"
                         as="font"
                         type="font/ttf"
