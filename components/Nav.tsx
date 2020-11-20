@@ -80,7 +80,7 @@ const Nav = (): JSX.Element => {
             initial={false}
             animate={isOpen ? 'open' : 'closed'}
             style={{ position: 'fixed', width: '100%', borderBottom: border, zIndex: 50 }}>
-            <Flex bg="background">
+            <Flex bg="background" sx={{ transition: 'background-color 450ms ease-in-out' }}>
                 <Flex
                     flex={1}
                     flexDirection="row"
