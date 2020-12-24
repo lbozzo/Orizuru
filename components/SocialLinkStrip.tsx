@@ -1,64 +1,47 @@
-import { FacebookBox } from '@styled-icons/remix-line/FacebookBox';
-import { Github } from '@styled-icons/remix-line/Github';
-import { Instagram } from '@styled-icons/remix-line/Instagram';
-import { LinkedinBox } from '@styled-icons/remix-line/LinkedinBox';
-import { Twitter } from '@styled-icons/remix-line/Twitter';
-import { FC } from 'react';
-import { Box, Flex } from 'rebass';
+import { BrandGithub, BrandInstagram, BrandLinkedin, BrandTwitter } from 'tabler-icons-react';
 
-import SocialLink from './SocialLink';
-
-interface SocialLinkStripProps {
-    size: number;
-}
-
-const SocialLinkStrip: FC<SocialLinkStripProps> = ({ size }) => (
-    <Flex flexDirection="row" mx={[-2, -3]}>
-        <Box mx={[2, 3]}>
-            <SocialLink
-                href="https://www.linkedin.com/in/lucas-bozzo/"
-                icon={LinkedinBox}
-                size={size}
-                color="linkedin"
-                altText="Follow me on LinkedIn"
-            />
-        </Box>
-        <Box mx={[2, 3]}>
-            <SocialLink
-                href="https://github.com/lbozzo"
-                icon={Github}
-                size={size}
-                altText="Follow me on Github"
-            />
-        </Box>
-        <Box mx={[2, 3]}>
-            <SocialLink
-                href="https://www.instagram.com/lucasbozzo"
-                icon={Instagram}
-                size={size}
-                color="instagram"
-                altText="Follow me on Instagram"
-            />
-        </Box>
-        <Box mx={[2, 3]}>
-            <SocialLink
-                href="https://www.facebook.com/lucas.jose.bozzo/"
-                icon={FacebookBox}
-                size={size}
-                color="facebook"
-                altText="Friend me on Facebook"
-            />
-        </Box>
-        <Box mx={[2, 3]}>
-            <SocialLink
-                href="https://twitter.com/ljbozzo"
-                icon={Twitter}
-                size={size}
-                color="twitter"
-                altText="Follow me on Twitter"
-            />
-        </Box>
-    </Flex>
-);
+const SocialLinkStrip = ({ size = 'normal' }: { size?: 'small' | 'normal' }): JSX.Element => {
+    const iconSize = size === 'small' ? 18 : 24;
+    return (
+        <div className="flex flex-row space-x-8 text-gray-700 dark:text-gray-50">
+            <div className="hover:text-blue-600">
+                <a
+                    href="https://www.linkedin.com/in/lucas-bozzo/"
+                    title="Follow me on LinkedIn"
+                    target="_blank"
+                    rel="noopener noreferrer">
+                    <BrandLinkedin size={iconSize} />
+                </a>
+            </div>
+            <div className="hover:text-gray-500">
+                <a
+                    href="https://github.com/lbozzo"
+                    title="Follow me on Github"
+                    target="_blank"
+                    rel="noopener noreferrer">
+                    <BrandGithub size={iconSize} />
+                </a>
+            </div>
+            <div className="hover:text-red-500">
+                <a
+                    href="https://www.instagram.com/lucasbozzo"
+                    title="Follow me on Instagram"
+                    target="_blank"
+                    rel="noopener noreferrer">
+                    <BrandInstagram size={iconSize} />
+                </a>
+            </div>
+            <div className="hover:text-blue-400">
+                <a
+                    href="https://twitter.com/ljbozzo"
+                    title="Follow me on Twitter"
+                    target="_blank"
+                    rel="noopener noreferrer">
+                    <BrandTwitter size={iconSize} />
+                </a>
+            </div>
+        </div>
+    );
+};
 
 export default SocialLinkStrip;
