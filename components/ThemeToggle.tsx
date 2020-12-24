@@ -3,13 +3,10 @@ import { WbSunny as LightOn } from '@styled-icons/material-twotone/WbSunny';
 import { useContext } from 'react';
 import { Box } from 'rebass/styled-components';
 
-import { ThemeContext } from '~components/ThemeContext';
-
 const ThemeToggle = (): JSX.Element => {
-    const { colorMode, setColorMode } = useContext(ThemeContext);
-
     return (
-        <Box as="button" onClick={() => setColorMode(colorMode == 'light' ? 'dark' : 'light')}>
+        /*
+        <Box as="button" onClick={() => >
             {colorMode == 'light' ? (
                 <Box
                     sx={{
@@ -30,6 +27,8 @@ const ThemeToggle = (): JSX.Element => {
                 </Box>
             )}
         </Box>
+        */
+        <div>tbd</div>
     );
 };
 
