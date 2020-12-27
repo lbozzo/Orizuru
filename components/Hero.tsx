@@ -13,7 +13,7 @@ const HeroSimple: FC = () => (
                     <div className="px-4 py-3 rounded-md shadow-md bg-gray-700 max-w-sm">
                         <div className="font-sans font-medium text-lg leading-loose text-white">
                             Hey stranger! How are you?
-                            <span role="img" aria-label="Hello">
+                            <span className="px-1" role="img" aria-label="Hello">
                                 👋
                             </span>
                             <div data-popper-arrow="" className="ml-12 mt-4 text-gray-400">
@@ -52,7 +52,7 @@ const HeroSimple: FC = () => (
                 }}>
                 <div className="relative w-20 h-20 rounded-full overflow-hidden shadow-lg">
                     <Image
-                        src="/assets/images/profile.jpg"
+                        src="/images/profile.jpg"
                         layout="fill"
                         objectFit="cover"
                         loading="eager"
