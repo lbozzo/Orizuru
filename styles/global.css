@@ -1,30 +1,22 @@
-
 @layer base {
     @font-face {
-        font-family: 'Charter';
-        src: url('/assets/fonts/Charter/Charter.woff2') format('woff');
-        font-weight: 700;
+        font-family: 'IBM Plex Sans';
+        src: url('/fonts/IBM_Plex_Sans/IBMPlexSans-Regular.ttf') format('truetype');
+        font-weight: 400;
         font-style: normal;
         font-display: swap;
     }
   @font-face {
-        font-family: 'Work Sans';
-        src: url('/assets/fonts/Work Sans/static/WorkSans-Bold.ttf') format('truetype');
+        font-family: 'Poppins';
+        src: url('/fonts/Poppins/Poppins-Bold.ttf') format('truetype');
         font-weight: 700;
         font-style: normal;
         font-display: swap;
   }
   @font-face {
-        font-family: 'Work Sans';
-        src: url('/assets/fonts/Work Sans/static/WorkSans-Medium.ttf') format('truetype');
+        font-family: 'Poppins';
+        src: url('/fonts/Poppins/Poppins-Medium.ttf') format('truetype');
         font-weight: 500;
-        font-style: normal;
-        font-display: swap;
-  }
-  @font-face {
-        font-family: 'Work Sans';
-        src: url('/assets/fonts/Work Sans/static/WorkSans-Regular.ttf') format('truetype');
-        font-weight: 400;
         font-style: normal;
         font-display: swap;
   }

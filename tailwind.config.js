@@ -1,37 +1,16 @@
-// eslint-disable-next-line @typescript-eslint/no-var-requires
+/* eslint-disable @typescript-eslint/no-var-requires */
 const colors = require('tailwindcss/colors');
+const defaultTheme = require('tailwindcss/defaultTheme');
 
 module.exports = {
     purge: ['./pages/**/*.tsx', './components/**/*.tsx'],
     darkMode: false, // or 'media' or 'class'
     theme: {
-        fontFamily: {
-            sans: [
-                'Work Sans',
-                'system-ui',
-                '-apple-system',
-                'Segoe UI',
-                'Roboto',
-                'Helvetica',
-                'Arial',
-                'sans-serif',
-                'Apple Color Emoji',
-                'Segoe UI Emoji'
-            ],
-            serif: [
-                'Charter',
-                'system-ui',
-                '-apple-system',
-                'Segoe UI',
-                'Roboto',
-                'Helvetica',
-                'Arial',
-                'sans-serif',
-                'Apple Color Emoji',
-                'Segoe UI Emoji'
-            ]
-        },
         extend: {
+            fontFamily: {
+                sans: ['Poppins', ...defaultTheme.fontFamily.sans],
+                serif: ['IBM Plex Sans', ...defaultTheme.fontFamily.serif]
+            },
             colors: {
                 gray: colors.coolGray
             }
