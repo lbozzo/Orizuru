@@ -56,6 +56,7 @@ const HeroSimple: FC = () => (
                         layout="fill"
                         objectFit="cover"
                         loading="eager"
+                        alt="Lucas Bozzo"
                     />
                 </div>
             </Tippy>
