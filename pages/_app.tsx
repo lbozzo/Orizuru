@@ -13,7 +13,10 @@ const MyApp: FC<AppProps> = ({ Component, pageProps }) => {
         <>
             <Head>
                 <title>Lucas Bozzo</title>
-                <meta name="description" content="Software Developer" />
+                <meta
+                    name="description"
+                    content="Software Developer from Panama, living in London."
+                />
             </Head>
 
             <MDXProvider components={MDXComponents}>
