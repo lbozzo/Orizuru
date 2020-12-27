@@ -12,4 +12,8 @@
         "source.fixAll.eslint": true
     },
     "eslint.alwaysShowStatus": true,
+    "css.validate": false,
+    "editor.quickSuggestions": {
+        "strings": true
+    }
 }
