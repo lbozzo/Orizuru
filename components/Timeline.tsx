@@ -3,35 +3,6 @@ import { Planet as Year0 } from 'tabler-icons-react';
 
 import Tooltip from '~components/Tooltip';
 
-const Event = ({ year, title, ...props }) => (
-    <div className="flex flex-row w-full items-center">
-        <div className="flex-1 h-1 bg-gray-100" />
-        <Tooltip
-            content={title}
-            offset={[0, 12]}
-            delay={[0, 0]}
-            interactive
-            popperOptions={{
-                modifiers: [
-                    {
-                        name: 'flip',
-                        options: {
-                            fallbackPlacements: ['top-end']
-                        }
-                    }
-                ]
-            }}
-            {...props}>
-            <div className="relative">
-                <div className="w-5 h-5 rounded-full border-4 cursor-pointer border-gray-100 bg-gray-600 hover:bg-indigo-400 transition-all duration-150" />
-                <span className="absolute left-1/2 transform -translate-x-1/2 pt-1 font-sans text-sm font-medium text-gray-700">
-                    {year}
-                </span>
-            </div>
-        </Tooltip>
-    </div>
-);
-
 const events = [
     {
         year: <Year0 size={21} />,
@@ -111,17 +82,49 @@ const events = [
     {
         year: `${new Date().getFullYear() + 1}+`,
         title: 'To make a difference in the world.',
-        visible: true
+        visible: true,
+        zIndex: 0
     }
 ];
 
+const Event = ({ year, title, ...props }) => (
+    <div className="flex flex-row w-full items-center">
+        <div className="flex-1 h-1 bg-gray-100" />
+        <Tooltip
+            content={title}
+            offset={[0, 12]}
+            delay={[0, 0]}
+            zIndex={1}
+            appendTo={() => document.body}
+            popperOptions={{
+                strategy: 'fixed',
+                modifiers: [
+                    {
+                        name: 'flip',
+                        options: {
+                            fallbackPlacements: ['right']
+                        }
+                    }
+                ]
+            }}
+            {...props}>
+            <div className="relative">
+                <div className="w-5 h-5 rounded-full border-4 cursor-pointer border-gray-100 bg-gray-600 hover:bg-indigo-400 transition-all duration-150" />
+                <span className="absolute left-1/2 transform -translate-x-1/2 pt-1 font-sans text-sm font-medium text-gray-700">
+                    {year}
+                </span>
+            </div>
+        </Tooltip>
+    </div>
+);
+
 const Timeline = (): JSX.Element => {
     return (
-        <div className="w-screen">
-            <motion.div className="flex flex-row items-center w-10/12">
-                <div className="w-32 h-1 bg-gray-100" />
+        <div className="w-auto">
+            <motion.div className="flex flex-col md:flex-row items-start md:items-center justify-center py-2 md:py-16 md:pr-8 lg:pr-24 min-w-min md:w-full lg:w-10/12">
+                <div className="w-32 h-1 my-2 bg-gray-100 invisible md:visible" />
                 {events.flatMap((props, i) => (
-                    <div key={i} style={{ flex: i + 1 }}>
+                    <div key={i} style={{ flex: i + 1 }} className={`w-12 sm:w-24 md:w-auto my-4`}>
                         <Event {...props} />
                     </div>
                 ))}

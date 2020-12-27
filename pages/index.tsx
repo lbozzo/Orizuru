@@ -36,7 +36,7 @@ export default function Home(): JSX.Element {
                         </p>
                     </div>
                 </Prose>
-                <div className="flex flex-wrap justify-center space-x-8 px-8 py-6 text-4xl text-gray-300">
+                <div className="flex flex-wrap items-end justify-center space-x-8 space-y-5 px-8 py-6 text-4xl text-gray-300">
                     <NextDotJs aria-label="Next.js" />
                     <Tailwindcss aria-label="TailwindCSS" />
                     <ReactLogo aria-label="React" />
@@ -69,7 +69,7 @@ export default function Home(): JSX.Element {
                         .
                     </div>
                 </Prose>
-                <div className="mt-16 py-12 ">
+                <div className="mt-10 md:mt-16 overflow-x-hidden">
                     <Timeline />
                 </div>
             </section>
