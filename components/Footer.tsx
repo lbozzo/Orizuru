@@ -7,12 +7,12 @@ const Footer = (): JSX.Element => (
     <footer className="py-6 px-8 bg-gray-200">
         <div className="max-w-screen-lg mx-auto font-sans">
             <div className="flex flex-col-reverse md:flex-row items-start font-sans font-medium text-sm text-gray-800">
-                <div className="flex-1 flex flex-col items-start space-y-3">
+                <div className="flex flex-1 flex-col items-start space-y-3">
                     <Link href="/" passHref>
                         <a>Home</a>
                     </Link>
                 </div>
-                <div className="py-2">
+                <div className="flex justify-center w-full md:w-max py-2">
                     <PlayingNow />
                 </div>
             </div>
