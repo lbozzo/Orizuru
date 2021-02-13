@@ -96,13 +96,22 @@ const Event = ({ year, title, ...props }) => (
             delay={[0, 0]}
             zIndex={1}
             appendTo={() => document.body}
+            placement="top"
             popperOptions={{
                 strategy: 'fixed',
                 modifiers: [
                     {
                         name: 'flip',
                         options: {
-                            fallbackPlacements: ['right']
+                            fallbackPlacements: []
+                        }
+                    },
+                    {
+                        name: 'preventOverflow',
+                        options: {
+                            mainAxis: false,
+                            tether: false,
+                            tetherOffset: ({ popper }) => popper.width / 2
                         }
                     }
                 ]
@@ -120,11 +129,11 @@ const Event = ({ year, title, ...props }) => (
 
 const Timeline = (): JSX.Element => {
     return (
-        <div className="w-auto">
-            <motion.div className="flex flex-col md:flex-row items-start md:items-center justify-center py-2 md:py-16 md:pr-8 lg:pr-24 min-w-min md:w-full lg:w-10/12">
-                <div className="w-32 h-1 my-2 bg-gray-100 invisible md:visible" />
+        <div className="w-auto py-4 overflow-x-scroll overflow-y-hidden no-scrollbar">
+            <motion.div className="flex flex-row items-center justify-center py-2 md:py-16 pr-32 md:pr-8 lg:pr-24 min-w-min md:w-full lg:w-10/12">
+                <div className="w-32 h-1 my-2 bg-gray-100" />
                 {events.flatMap((props, i) => (
-                    <div key={i} style={{ flex: i + 1 }} className={`w-12 sm:w-24 md:w-auto my-4`}>
+                    <div key={i} style={{ flex: i + 1 }} className={`w-24 md:w-auto my-4`}>
                         <Event {...props} />
                     </div>
                 ))}

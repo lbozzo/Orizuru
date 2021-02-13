@@ -6,18 +6,27 @@
         font-style: normal;
         font-display: swap;
     }
-  @font-face {
+    @font-face {
         font-family: 'Poppins';
         src: url('/fonts/Poppins/Poppins-Bold.ttf') format('truetype');
         font-weight: 700;
         font-style: normal;
         font-display: swap;
-  }
-  @font-face {
+    }
+    @font-face {
         font-family: 'Poppins';
         src: url('/fonts/Poppins/Poppins-Medium.ttf') format('truetype');
         font-weight: 500;
         font-style: normal;
         font-display: swap;
-  }
+    }
+}
+
+.no-scrollbar::-webkit-scrollbar {
+    display: none;
+}
+
+.no-scrollbar {
+    -ms-overflow-style: none; /* IE and Edge */
+    scrollbar-width: none; /* Firefox */
 }
