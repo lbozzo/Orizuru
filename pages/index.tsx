@@ -22,21 +22,20 @@ export default function Home(): JSX.Element {
             <Hero />
             <section id="skills" className="pt-32">
                 <Prose>
-                    <h2 className="font-sans font-bold text-3xl leading-normal">
-                        My skills allow me to work on anything.
+                    <h2 className="font-sans font-bold text-3xl leading-normal text-gray-900 dark:text-gray-100">
+                        My skillset: Anywhere and everywhere.
                     </h2>
-                    <div className="pt-16 font-serif font-normal text-lg text-gray-700 leading-loose">
-                        <p className="text-lg font-serif font-normal leading-loose text-gray-700">
+                    <div className="pt-16 font-serif font-normal text-lg text-gray-700 dark:text-gray-300 leading-loose">
+                        <p className="text-lg font-serif font-normal leading-loose">
                             I have specialized in open source technologies capable of operating
-                            cross-platforms. It also allows me to develop on the web, mobile and
-                            backend.
+                            cross-platforms, including the web, mobile, API&apos;s and databases.
                             <span role="img" aria-label="Strong arm">
                                 💪
                             </span>
                         </p>
                     </div>
                 </Prose>
-                <div className="flex flex-wrap items-end justify-center space-x-8 space-y-5 px-8 py-6 text-4xl text-gray-300">
+                <div className="flex flex-wrap items-end justify-center space-x-8 space-y-5 px-8 py-6 text-4xl text-gray-300 dark:text-gray-500">
                     <NextDotJs aria-label="Next.js" />
                     <Tailwindcss aria-label="TailwindCSS" />
                     <ReactLogo aria-label="React" />
@@ -46,19 +45,19 @@ export default function Home(): JSX.Element {
                     <StyledComponents aria-label="Styled-components" />
                     <Amazonaws aria-label="AWS" />
                 </div>
-                <div className="flex flex-row justify-center font-sans text-sm text-center leading-none text-gray-700">
+                <div className="flex flex-row justify-center font-sans text-sm text-center leading-none text-gray-700 dark:text-gray-300">
                     I <HeartBeat /> Open Source
                 </div>
             </section>
             <section id="timeline" className="pt-32">
                 <Prose>
-                    <h2 className="font-sans font-bold text-3xl leading-normal">
+                    <h2 className="font-sans font-bold text-3xl leading-normal text-gray-900 dark:text-gray-100">
                         My story is simple, but my dreams are big.
                     </h2>
-                    <div className="pt-16 font-serif font-normal text-lg text-gray-700 leading-loose">
-                        My story is short as I&apos;m only {new Date().getFullYear() - 1993} years
-                        old. However, I want to share with you some of the highlights in my life. If
-                        you want a more detailed professional career, you can{' '}
+                    <div className="pt-16 font-serif font-normal text-lg text-gray-700 dark:text-gray-300 leading-loose">
+                        I&apos;m {new Date().getFullYear() - 1993} years old. I want to share with
+                        you some of the highlights in my life. If you want a more detailed
+                        professional career, you can{' '}
                         <a
                             className="underline"
                             href={process.env.NEXT_PUBLIC_CV_URL}
@@ -75,10 +74,10 @@ export default function Home(): JSX.Element {
             </section>
             <section id="contact" className="pt-32">
                 <Prose>
-                    <h2 className="font-sans font-bold text-3xl leading-normal">
+                    <h2 className="font-sans font-bold text-3xl leading-normal text-gray-900 dark:text-gray-100">
                         Want to talk about your project or just say hello?
                     </h2>
-                    <div className="pt-16 font-serif font-normal text-lg text-gray-700 leading-loose">
+                    <div className="pt-16 font-serif font-normal text-lg text-gray-700 dark:text-gray-300 leading-loose">
                         <div>
                             <p>
                                 Don&apos;t hesitate to send me a message at{' '}

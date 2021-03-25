@@ -72,7 +72,7 @@ const events = [
         year: 2021,
         title: (
             <>
-                Moved to UK{' '}
+                Completed a master&apos;s program in business at Newcastle University, UK.{' '}
                 <span role="img" aria-label="UK">
                     💂
                 </span>
