@@ -10,7 +10,7 @@ const Hero: FC = () => {
         strings: [
             'Obsessed with Quality.',
             'Obsessed with Learning.',
-            'Coffee Addict.',
+            'Recovering coffee addict.',
             'Traveller.'
         ],
         loop: true,
