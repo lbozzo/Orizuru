@@ -1,8 +1,5 @@
-import { Bulb } from 'tabler-icons-react';
-
 const Navbar = (): JSX.Element => (
     <div className="flex flex-row items-center w-full py-5">
-        <Bulb size={30} strokeWidth={1.5} />
         <div className="flex flex-1 justify-end space-x-6">
             <a
                 href="/#contact"
