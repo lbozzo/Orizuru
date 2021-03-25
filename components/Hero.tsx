@@ -7,7 +7,12 @@ import Navbar from '~components/Navbar';
 
 const Hero: FC = () => {
     const typedOptions: TypedOptions = {
-        strings: ['Obsessed with Quality.', 'Obsessed with Learning.', 'Cinephile.', 'Traveller.'],
+        strings: [
+            'Obsessed with Quality.',
+            'Obsessed with Learning.',
+            'Coffee Addict.',
+            'Traveller.'
+        ],
         loop: true,
         startDelay: 900,
         backDelay: 2900,
@@ -21,12 +26,12 @@ const Hero: FC = () => {
         return () => typed.destroy();
     });
     return (
-        <div className="flex flex-col h-auto md:h-screen px-8 md:px-28 bg-gray-100">
+        <div className="flex flex-col h-auto md:h-screen px-8 md:px-28 bg-gray-100 dark:bg-gray-900">
             <Navbar />
-            <div className="flex md:flex-1 flex-col md:flex-row md:items-end justify-end md:justify-between md:space-x-10 w-full max-w-3xl pt-20 md:pt-20 text-sm md:text-base font-medium font-sans text-gray-600">
+            <div className="flex md:flex-1 flex-col md:flex-row md:items-end justify-end md:justify-between md:space-x-10 w-full max-w-3xl pt-20 md:pt-20 text-sm md:text-base font-medium font-sans text-gray-600 dark:text-gray-300">
                 <Tippy
                     render={() => (
-                        <div className="px-4 py-3 rounded-md shadow-md bg-gray-700 max-w-sm">
+                        <div className="px-4 py-3 rounded-md shadow-md bg-gray-700 dark:bg-gray-600 max-w-sm">
                             <div className="font-sans font-medium text-lg leading-loose text-white">
                                 Hey stranger! How are you?
                                 <span className="px-1" role="img" aria-label="Hello">
@@ -77,8 +82,7 @@ const Hero: FC = () => {
                     </div>
                 </Tippy>
                 <div className="py-6">
-                    <p>I&apos;m Lucas Bozzo, a Panamanian</p>
-                    <p>Living in London</p>
+                    <p>My name is Lucas Bozzo.</p>
                 </div>
                 <div className="py-6">
                     You can check out
@@ -104,7 +108,7 @@ const Hero: FC = () => {
                         Software Developer
                     </span>
                     <br />
-                    <div className="h-14">
+                    <div className="h-14 text-gray-800 dark:text-gray-100">
                         <span id="typedSpan" />
                     </div>
                 </h1>
